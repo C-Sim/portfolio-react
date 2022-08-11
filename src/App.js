@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { AboutMe } from "./pages/AboutMe";
-import { Portfolio } from "./pages/Portfolio";
-import { CV } from "./pages/CV";
-import { Contact } from "./pages/Contact";
+import { AboutMe } from "./containers/AboutMe";
+import { Portfolio } from "./containers/Portfolio";
+import { CV } from "./containers/CV";
+import { Contact } from "./containers/Contact";
 
 export const App = () => {
   return (
