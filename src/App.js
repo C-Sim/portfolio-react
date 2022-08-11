@@ -1,19 +1,35 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import Box from "@mui/material/Box";
 
-import { AboutMe } from "./containers/AboutMe";
-import { Portfolio } from "./containers/Portfolio";
-import { CV } from "./containers/CV";
-import { Contact } from "./containers/Contact";
+import { AppRoutes } from "./AppRoutes";
+import { NavBar } from "./components/organisms/NavBar";
 
 export const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/*" element={<AboutMe />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/cv" element={<CV />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <NavBar
+        navItems={[
+          {
+            label: "About Me",
+            href: "/",
+          },
+          {
+            label: "Portfolio",
+            href: "/portfolio",
+          },
+          {
+            label: "CV",
+            href: "/cv",
+          },
+          {
+            label: "Contact",
+            href: "/contact",
+          },
+        ]}
+      />
+      <Box component="main" sx={{ marginTop: 18 }}>
+        <AppRoutes />
+      </Box>
     </Router>
   );
 };

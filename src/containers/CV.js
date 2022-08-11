@@ -1,3 +1,5 @@
+import { PageTitle } from "../components/atoms/PageTitle";
+
 export const CV = () => {
-  return <h1>CV</h1>;
+  return <PageTitle title="CV" />;
 };

@@ -1,3 +1,5 @@
+import { PageTitle } from "../components/atoms/PageTitle";
+
 export const Contact = () => {
-  return <h1>Contact</h1>;
+  return <PageTitle title="Contact Me" />;
 };

@@ -1,3 +1,5 @@
+import { PageTitle } from "../components/atoms/PageTitle";
+
 export const Portfolio = () => {
-  return <h1>Portfolio</h1>;
+  return <PageTitle title="Portfolio" />;
 };

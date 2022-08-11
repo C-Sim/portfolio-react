@@ -1,3 +1,5 @@
+import { PageTitle } from "../components/atoms/PageTitle";
+
 export const AboutMe = () => {
-  return <h1>About Me</h1>;
+  return <PageTitle title="About Me" />;
 };
