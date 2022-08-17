@@ -11,8 +11,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { GitHubIcon } from "@mui/icons-material/GitHub";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { List } from "@mui/material";
 
