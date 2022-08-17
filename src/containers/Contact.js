@@ -35,7 +35,6 @@ export const Contact = () => {
     mode: "onBlur",
   });
   const isMobile = useMediaQuery("(max-width:900px)");
-  const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = (data) => {
     // mailtoc.s

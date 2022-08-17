@@ -13,6 +13,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { NavLink } from "react-router-dom";
 
 export const NavBar = ({ navItems }) => {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -28,15 +29,18 @@ export const NavBar = ({ navItems }) => {
         Cherelle Simpson
       </Typography>
       <Divider />
-      <List>
+
+      <nav className="nav" sx={{ display: { xs: "none", sm: "block" } }}>
         {navItems.map((item) => (
-          <ListItem key={item.label} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }} href={item.href}>
-              <ListItemText primary={item.label} />
-            </ListItemButton>
-          </ListItem>
+          <NavLink
+            to={item.href}
+            className={({ isActive }) => (isActive ? "link-active" : "link")}
+            href={item.href}
+          >
+            {item.label}
+          </NavLink>
         ))}
-      </List>
+      </nav>
     </Box>
   );
 
@@ -58,13 +62,25 @@ export const NavBar = ({ navItems }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <h1>Cherelle Simpson</h1>
-
+          <Typography
+            variant="h6"
+            component="div"
+            href="/"
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+          >
+            Cherelle Simpson
+          </Typography>
+          <Box className="nav" sx={{ display: isMobile ? "none" : "flex" }}>
             {navItems.map((item) => (
-              <Button key={item.label} sx={{ color: "#fff" }} href={item.href}>
+              <NavLink
+                to={item.href}
+                className={({ isActive }) =>
+                  isActive ? "link-active" : "link"
+                }
+                href={item.href}
+              >
                 {item.label}
-              </Button>
+              </NavLink>
             ))}
           </Box>
         </Toolbar>
