@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -12,12 +12,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
-const drawerWidth = 240;
-
-export const NavBar = ({ navItems }, props) => {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+export const NavBar = ({ navItems }) => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -26,14 +25,14 @@ export const NavBar = ({ navItems }, props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Cherelle Simpson
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.label} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }} href={item.href}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -41,12 +40,14 @@ export const NavBar = ({ navItems }, props) => {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar component="nav">
+    <Box sx={{ display: "flex" }} component="header">
+      <AppBar
+        component="nav"
+        sx={{
+          backgroundColor: "#264653",
+        }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -57,14 +58,9 @@ export const NavBar = ({ navItems }, props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            MUI
-          </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <h1>Cherelle Simpson</h1>
+
             {navItems.map((item) => (
               <Button key={item.label} sx={{ color: "#fff" }} href={item.href}>
                 {item.label}
@@ -75,20 +71,19 @@ export const NavBar = ({ navItems }, props) => {
       </AppBar>
       <Box component="nav">
         <Drawer
-          container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
             },
           }}
+          anchor="top"
         >
           {drawer}
         </Drawer>

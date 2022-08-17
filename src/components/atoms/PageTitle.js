@@ -1,15 +1,20 @@
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 
 export const PageTitle = ({ title }) => {
   return (
-    <Typography
-      variant="h1"
-      component="div"
-      gutterBottom
-      align="center"
-      sx={{ p: 4 }}
-    >
-      {title}
-    </Typography>
+    <Box>
+      <Typography
+        variant="h3"
+        component="h1"
+        gutterBottom
+        align="center"
+        sx={{ paddingTop: 3 }}
+      >
+        {title}
+      </Typography>
+      <Divider />
+    </Box>
   );
 };
