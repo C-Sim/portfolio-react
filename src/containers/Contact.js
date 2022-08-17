@@ -20,7 +20,6 @@ import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
 import FormHelperText from "@mui/material/FormHelperText";
 
-import { PageTitle } from "../components/atoms/PageTitle";
 import {
   CheckCircleOutlineOutlined,
   ChevronLeftOutlined,
@@ -42,9 +41,15 @@ export const Contact = () => {
   };
 
   return (
-    <Paper sx={{ p: 3, minWidth: isMobile ? "90%" : "400px" }} elevation={6}>
+    <Paper
+      sx={{ p: 3, mb: 4, minWidth: isMobile ? "90%" : "400px" }}
+      elevation={6}
+    >
       <Typography component="h1" variant="h4" align="center">
         Contact Me
+      </Typography>
+      <Typography align="center">
+        Send me a message using the form below
       </Typography>
       <Divider />
       <Stack

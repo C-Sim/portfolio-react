@@ -43,7 +43,7 @@ export const App = () => {
             },
           ]}
         />
-        <Container component="main" sx={{ marginTop: 18 }}>
+        <Container component="main" sx={{ marginTop: 12 }}>
           <AppRoutes />
         </Container>
         <Footer

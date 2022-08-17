@@ -15,53 +15,29 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { List } from "@mui/material";
 
 export const Footer = ({ footerItems }) => {
-  const isMobile = useMediaQuery("(max-width:600px)");
-  //   const [mobileOpen, setMobileOpen] = useState(false);
-
-  //   const handleDrawerToggle = () => {
-  //     setMobileOpen(!mobileOpen);
-  //   };
-
-  //   const drawer = (
-  //     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-  //       <Typography variant="h6" sx={{ my: "auto" }}>
-  //         Contact Me
-  //       </Typography>
-  //       <Divider />
-  //       <Box>
-  //         {footerItems.map((item) => (
-  //           <Link sx={{ textAlign: "center" }} href={item.href} target="_blank">
-  //             <FontAwesomeIcon icon={item.icon} />
-  //           </Link>
-  //         ))}
-  //       </Box>
-  //     </Box>
-  //   );
+  // const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
     <Box sx={{ display: "flex" }} component="footer-box">
       <Box
         component="footer"
         sx={{
-          backgroundColor: "#264653",
+          backgroundColor: "#4f6367ff",
         }}
       >
         <Toolbar>
-          {/* <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            // onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton> */}
           <Box sx={{ textAlign: "center", width: "100vw" }}>
             {footerItems.map((item) => (
               <IconButton
-                sx={{ textAlign: "center", color: "#fff" }}
+                sx={{
+                  textAlign: "center",
+                  color: "#c8c8c8",
+                  pl: 4,
+                  pr: 4,
+                }}
                 href={item.href}
                 target="_blank"
+                className="icon"
               >
                 <item.icon />
               </IconButton>
@@ -69,25 +45,6 @@ export const Footer = ({ footerItems }) => {
           </Box>
         </Toolbar>
       </Box>
-      {/* <Box component="nav">
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-            },
-          }}
-          anchor="top"
-        >
-          {drawer}
-        </Drawer>
-      </Box> */}
     </Box>
   );
 };

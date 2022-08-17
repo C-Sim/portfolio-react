@@ -78,7 +78,12 @@ body {
 }
 
 .link-active {
-  color: var(--golden);
+  color: var(--beige);
+}
+
+.link:hover,
+.icon:hover {
+  color: #d5bb64;
 }
 
 @media screen and (max-width: 600px) {

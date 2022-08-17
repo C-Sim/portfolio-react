@@ -49,7 +49,7 @@ export const NavBar = ({ navItems }) => {
       <AppBar
         component="nav"
         sx={{
-          backgroundColor: "#264653",
+          backgroundColor: "#4f6367ff",
         }}
       >
         <Toolbar>
@@ -66,7 +66,11 @@ export const NavBar = ({ navItems }) => {
             variant="h6"
             component="div"
             href="/"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+              color: "#eef5dbff",
+            }}
           >
             Cherelle Simpson
           </Typography>
