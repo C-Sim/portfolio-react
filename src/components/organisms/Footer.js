@@ -27,6 +27,7 @@ export const Footer = ({ footerItems }) => {
       >
         <Toolbar>
           <Box sx={{ textAlign: "center", width: "100vw" }}>
+            {/* add key to every mapped item */}
             {footerItems.map((item) => (
               <IconButton
                 sx={{

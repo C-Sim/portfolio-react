@@ -1,18 +1,45 @@
+import { Grid, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 
 export const AboutMe = () => {
   return (
-    <Box container sx={{ minHeight: "100vh" }}>
-      <Box
-        sx={{
-          width: "100%",
-          height: "100%",
-          backgroundImage: `url("../components/atoms/Kinkakuji.jpg")`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
-      />
+    <Box>
+      <Box container sx={{ minHeight: "90vh" }}>
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            backgroundImage: `url("../components/atoms/Kinkakuji.jpg")`,
+            // backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      </Box>
+
+      <Grid container spacing={4} sx={{ mb: 4 }}>
+        <Grid item xs={12} sm={4} md={4}>
+          <img src="../components/atoms/CS.jpg" />
+        </Grid>
+
+        <Grid item xs={12} sm={8} md={8}>
+          <Typography sx={{ mb: 4, color: "#4f6367ff" }}>
+            An established business professional with extensive experience in
+            management roles within large and reputable companies.
+          </Typography>
+
+          <Typography sx={{ mb: 4, color: "#4f6367ff" }}>
+            Passionate about merging logic with creativity to create functional
+            and aesthetically pleasing outputs.
+          </Typography>
+
+          <Typography sx={{ color: "#4f6367ff" }}>
+            {" "}
+            Naturally creative and an adept problem-solver with proficiency in a
+            wide range of coding languages and skills. Find more detail{" "}
+            <a href="/cv">here.</a>
+          </Typography>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
