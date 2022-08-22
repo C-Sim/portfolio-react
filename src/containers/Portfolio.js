@@ -16,11 +16,8 @@ export const Portfolio = () => {
         sx={{
           width: "100%",
         }}
+        cols={4}
       >
-        <ImageListItem key="Subheader" cols={4}>
-          <ListSubheader component="div">All Projects</ListSubheader>
-        </ImageListItem>
-
         {projects.map((item) => {
           const cols = item.featured ? 2 : 1;
           const rows = item.featured ? 2 : 1;
@@ -37,7 +34,11 @@ export const Portfolio = () => {
               </a>
               <ImageListItemBar
                 title={item.title}
-                subtitle={item.author}
+                sx={{
+                  color: "#4f6367ff",
+                  fontSize: 10,
+                  fontWeight: 100,
+                }}
                 actionIcon={
                   <IconButton
                     sx={{ color: "rgba(255, 255, 255, 0.54)" }}
@@ -172,12 +173,5 @@ const projects = [
     technologies: ["HTML" - "CSS"],
     deployedUrl: "https://c-sim.github.io/semantic-html-refactor/",
     gitHubRepo: "https://github.com/C-Sim/semantic-html-refactor",
-  },
-  {
-    img: "",
-    title: "",
-    technologies: [],
-    deployedUrl: "",
-    gitHubRepo: "",
   },
 ];

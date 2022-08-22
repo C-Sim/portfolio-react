@@ -10,106 +10,142 @@ import Typography from "@mui/material/Typography";
 export const CV = () => {
   return (
     <Grid container>
-      <ImageList>
-        <ImageListItem key="Subheader" cols={12}>
-          <ListSubheader component="div">Front End</ListSubheader>
+      <ImageList
+        sx={{
+          width: "100%",
+        }}
+        cols={12}
+      >
+        <ImageListItem key="Subheader" cols={12} sx={{ paddingBottom: "8px" }}>
+          <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+            Front End
+          </ListSubheader>
         </ImageListItem>
         {frontEnd.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=64&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=64&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
-            <ImageListItemBar
+            <Typography
               position="below"
               sx={{
                 textAlign: "center",
                 color: "#4f6367ff",
-                fontSize: 10,
+                fontSize: "0.72rem",
                 fontWeight: 100,
+                paddingTop: "8px",
               }}
-              title={item.title}
-            />
+            >
+              {item.title}
+            </Typography>
           </ImageListItem>
         ))}
       </ImageList>
 
-      <ImageList>
-        <ImageListItem key="Subheader" cols={12}>
-          <ListSubheader component="div">Back End</ListSubheader>
+      <ImageList
+        sx={{
+          width: "100%",
+        }}
+        cols={12}
+      >
+        <ImageListItem key="Subheader" cols={12} sx={{ paddingBottom: "8px" }}>
+          <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+            Back End
+          </ListSubheader>
         </ImageListItem>
         {backEnd.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=64&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=64&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
-            <ImageListItemBar
+            <Typography
               position="below"
               sx={{
                 textAlign: "center",
                 color: "#4f6367ff",
-                fontSize: 10,
+                fontSize: "0.72rem",
                 fontWeight: 100,
+                paddingTop: "8px",
               }}
-              title={item.title}
-            />
+            >
+              {item.title}
+            </Typography>
           </ImageListItem>
         ))}
       </ImageList>
 
-      <ImageList>
-        <ImageListItem key="Subheader" cols={12}>
-          <ListSubheader component="div">Development Tools</ListSubheader>
+      <ImageList
+        sx={{
+          width: "100%",
+        }}
+        cols={12}
+      >
+        <ImageListItem key="Subheader" cols={12} sx={{ paddingBottom: "8px" }}>
+          <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+            Development Tools
+          </ListSubheader>
         </ImageListItem>
         {tools.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=64&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=64&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
-            <ImageListItemBar
+            <Typography
               position="below"
               sx={{
                 textAlign: "center",
                 color: "#4f6367ff",
-                fontSize: 10,
+                fontSize: "0.72rem",
                 fontWeight: 100,
+                paddingTop: "8px",
               }}
-              title={item.title}
-            />
+            >
+              {item.title}
+            </Typography>
           </ImageListItem>
         ))}
       </ImageList>
 
-      <ImageList>
-        <ImageListItem key="Subheader" cols={12}>
-          <ListSubheader component="div">Professional Skills</ListSubheader>
+      <ImageList
+        sx={{
+          width: "100%",
+        }}
+        cols={12}
+      >
+        <ImageListItem key="Subheader" cols={12} sx={{ paddingBottom: "8px" }}>
+          <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+            Professional Skills
+          </ListSubheader>
         </ImageListItem>
         {skills.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=64&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=64&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
-            <ImageListItemBar
+            <Typography
               position="below"
               sx={{
                 textAlign: "center",
                 color: "#4f6367ff",
-                fontSize: 10,
+                fontSize: "0.72rem",
                 fontWeight: 100,
+                paddingTop: "8px",
               }}
-              title={item.title}
-            />
+            >
+              {item.title}
+            </Typography>
           </ImageListItem>
         ))}
       </ImageList>
@@ -121,6 +157,7 @@ export const CV = () => {
           padding: 4,
           color: "#eef5dbff",
           fontWeight: 100,
+          fontSize: "0.9rem",
         }}
       >
         For more detail on my skills and experience, please find a copy of my CV{" "}
@@ -144,68 +181,54 @@ const frontEnd = [
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
     title: "React",
-    cols: 1,
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
     title: "HTML5",
-    cols: 1,
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
     title: "CSS3",
-    cols: 1,
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg",
     title: "MaterialUI",
-    cols: 1,
   },
 
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
     title: "Bootstrap",
-    cols: 1,
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original-wordmark.svg",
     title: "jQuery",
-    cols: 1,
-  },
-  {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original-wordmark.svg",
-    title: "Moment",
-    cols: 1,
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/handlebars/handlebars-original-wordmark.svg",
     title: "Handlebars",
-    cols: 1,
-  },
-  {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original-wordmark.svg",
-    title: "FontAwesome",
-    cols: 1,
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bulma/bulma-plain.svg",
     title: "Bulma",
-    cols: 1,
   },
   {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original-wordmark.svg",
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    title: "Moment",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    title: "FontAwesome",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
     title: "Typewriter",
-    cols: 1,
   },
 ];
 
 const backEnd = [
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
-    title: "JavaScript ES6",
-    rows: 2,
-    cols: 2,
-    featured: true,
+    title: "JavaScript",
   },
   {
     img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
@@ -223,57 +246,35 @@ const backEnd = [
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
     title: "Node",
-    cols: 2,
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
     title: "Express",
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-    title: "NoSQL",
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
     title: "MongoDB",
   },
   {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-    title: "Mongoose",
-  },
-
-  {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain-wordmark.svg",
     title: "GraphQL",
-  },
-
-  {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-    title: "Inquirer",
   },
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sequelize/sequelize-original-wordmark.svg",
     title: "Sequelize",
-    cols: 2,
   },
   {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    title: "Inquirer",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
     title: "RESTful APIs",
-    cols: 2,
   },
 
   {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
     title: "Axios",
-    cols: 2,
-  },
-  {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-    title: "bcrypt",
-    cols: 2,
   },
 ];
 
@@ -281,40 +282,30 @@ const tools = [
   {
     img: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg",
     title: "Git",
-    rows: 2,
-    cols: 2,
-    featured: true,
   },
   {
     img: "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg",
     title: "Heroku",
   },
   {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
+    img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    title: "Postman",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
     title: "JawsDB",
   },
   {
-    img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
-    title: "Postman",
-    cols: 2,
-  },
-
-  {
     img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
     title: "Agile",
-    cols: 2,
   },
   {
     img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
     title: "TDD",
-    cols: 2,
   },
   {
     img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
     title: "OOP",
-    rows: 2,
-    cols: 2,
-    featured: true,
   },
   {
     img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
@@ -330,8 +321,6 @@ const skills = [
   {
     img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
     title: "Project Management",
-    rows: 2,
-    cols: 2,
   },
   {
     img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
@@ -344,34 +333,25 @@ const skills = [
   {
     img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
     title: "Leadership",
-    cols: 2,
   },
   {
     img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
     title: "Stakeholder Management",
-    cols: 2,
   },
   {
     img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
     title: "Data Analysis",
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Lean Six Sigma",
   },
   {
     img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
     title: "Commercial Awareness",
   },
   {
-    img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
     title: "Continuous Improvement",
   },
   {
-    img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
     title: "Business Development",
   },
 ];
