@@ -11,106 +11,131 @@ export const CV = () => {
   return (
     <Grid container>
       <ImageList>
-        <ImageListItem key="Subheader" cols={8}>
+        <ImageListItem key="Subheader" cols={12}>
           <ListSubheader component="div">Front End</ListSubheader>
         </ImageListItem>
         {frontEnd.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=64&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=64&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
             <ImageListItemBar
+              position="below"
+              sx={{
+                textAlign: "center",
+                color: "#4f6367ff",
+                fontSize: 10,
+                fontWeight: 100,
+              }}
               title={item.title}
-              actionIcon={
-                <IconButton
-                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                  aria-label={`info about ${item.title}`}
-                ></IconButton>
-              }
             />
           </ImageListItem>
         ))}
       </ImageList>
 
       <ImageList>
-        <ImageListItem key="Subheader" cols={8}>
+        <ImageListItem key="Subheader" cols={12}>
           <ListSubheader component="div">Back End</ListSubheader>
         </ImageListItem>
         {backEnd.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=64&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=64&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
             <ImageListItemBar
+              position="below"
+              sx={{
+                textAlign: "center",
+                color: "#4f6367ff",
+                fontSize: 10,
+                fontWeight: 100,
+              }}
               title={item.title}
-              actionIcon={
-                <IconButton
-                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                  aria-label={`info about ${item.title}`}
-                ></IconButton>
-              }
             />
           </ImageListItem>
         ))}
       </ImageList>
 
       <ImageList>
-        <ImageListItem key="Subheader" cols={8}>
+        <ImageListItem key="Subheader" cols={12}>
           <ListSubheader component="div">Development Tools</ListSubheader>
         </ImageListItem>
         {tools.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=64&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=64&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
             <ImageListItemBar
+              position="below"
+              sx={{
+                textAlign: "center",
+                color: "#4f6367ff",
+                fontSize: 10,
+                fontWeight: 100,
+              }}
               title={item.title}
-              actionIcon={
-                <IconButton
-                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                  aria-label={`info about ${item.title}`}
-                ></IconButton>
-              }
             />
           </ImageListItem>
         ))}
       </ImageList>
 
       <ImageList>
-        <ImageListItem key="Subheader" cols={8}>
+        <ImageListItem key="Subheader" cols={12}>
           <ListSubheader component="div">Professional Skills</ListSubheader>
         </ImageListItem>
         {skills.map((item) => (
           <ImageListItem key={item.img}>
             <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=64&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=64&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
             />
             <ImageListItemBar
+              position="below"
+              sx={{
+                textAlign: "center",
+                color: "#4f6367ff",
+                fontSize: 10,
+                fontWeight: 100,
+              }}
               title={item.title}
-              actionIcon={
-                <IconButton
-                  sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                  aria-label={`info about ${item.title}`}
-                ></IconButton>
-              }
             />
           </ImageListItem>
         ))}
       </ImageList>
 
-      <Typography>Find a copy of my CV here.</Typography>
+      <Typography
+        sx={{
+          textAlign: "center",
+          width: "100vw",
+          padding: 4,
+          color: "#eef5dbff",
+          fontWeight: 100,
+        }}
+      >
+        For more detail on my skills and experience, please find a copy of my CV{" "}
+        <a
+          sx={{
+            color: "#4f6367ff",
+            fontWeight: 100,
+            textDecoration: "none",
+          }}
+          href="https://resume.io/r/O2cItbDOx"
+        >
+          here
+        </a>
+        .
+      </Typography>
     </Grid>
   );
 };

@@ -13,29 +13,42 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
 
 export const NavBar = ({ navItems }) => {
   const isMobile = useMediaQuery("(max-width:600px)");
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", backgroundColor: "#4f6367ff" }}
+    >
+      <Typography
+        variant="h6"
+        sx={{ my: 2, fontWeight: 100, color: "#eef5dbff" }}
+      >
         Cherelle Simpson
       </Typography>
       <Divider />
 
-      <nav className="nav" sx={{ display: { xs: "none", sm: "block" } }}>
+      <nav
+        className="nav"
+        sx={{ display: { xs: "none", sm: "block" }, fontWeight: 100 }}
+      >
         {navItems.map((item) => (
           <NavLink
             to={item.href}
             className={({ isActive }) => (isActive ? "link-active" : "link")}
-            href={item.href}
+            // onClick={() => {
+            //   navigate(item.href, { replace: true });
+            // }}
           >
             {item.label}
           </NavLink>
@@ -70,18 +83,24 @@ export const NavBar = ({ navItems }) => {
               flexGrow: 1,
               display: { xs: "none", sm: "block" },
               color: "#eef5dbff",
+              fontWeight: 100,
             }}
           >
             Cherelle Simpson
           </Typography>
-          <Box className="nav" sx={{ display: isMobile ? "none" : "flex" }}>
+          <Box
+            className="nav"
+            sx={{ display: isMobile ? "none" : "flex", fontWeight: 100 }}
+          >
             {navItems.map((item) => (
               <NavLink
                 to={item.href}
                 className={({ isActive }) =>
                   isActive ? "link-active" : "link"
                 }
-                href={item.href}
+                // onClick={() => {
+                //   navigate(item.href, { replace: true });
+                // }}
               >
                 {item.label}
               </NavLink>

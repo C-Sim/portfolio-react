@@ -67,8 +67,8 @@ body {
 .nav a {
   display: flex;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 18px;
+  padding-right: 18px;
   height: 100%;
   text-decoration: none;
 }
@@ -82,8 +82,13 @@ body {
 }
 
 .link:hover,
-.icon:hover {
-  color: #d5bb64;
+.icon:hover,
+.button:hover {
+  color: var(--golden);
+}
+
+.button:hover {
+  background-color: var(--cadet-blue);
 }
 
 @media screen and (max-width: 600px) {

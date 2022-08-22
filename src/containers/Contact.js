@@ -13,17 +13,10 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
 import FormHelperText from "@mui/material/FormHelperText";
-
-import {
-  CheckCircleOutlineOutlined,
-  ChevronLeftOutlined,
-} from "@mui/icons-material";
 
 export const Contact = () => {
   const {
@@ -33,6 +26,7 @@ export const Contact = () => {
   } = useForm({
     mode: "onBlur",
   });
+
   const isMobile = useMediaQuery("(max-width:900px)");
 
   const onSubmit = (data) => {
@@ -45,13 +39,24 @@ export const Contact = () => {
       sx={{ p: 3, mb: 4, minWidth: isMobile ? "90%" : "400px" }}
       elevation={6}
     >
-      <Typography component="h1" variant="h4" align="center">
+      <Typography
+        component="h1"
+        variant="h4"
+        align="center"
+        sx={{ fontWeight: 200, color: "#4f6367ff" }}
+      >
         Contact Me
       </Typography>
-      <Typography align="center">
+
+      <Typography
+        align="center"
+        sx={{ p: 3, fontWeight: 100, color: "#4f6367ff" }}
+      >
         Send me a message using the form below
       </Typography>
+
       <Divider />
+
       <Stack
         component="form"
         sx={{ p: 3 }}
@@ -79,9 +84,9 @@ export const Contact = () => {
             })}
           />
 
-          <TextareaAutosize
+          <TextField
             error={!!errors.message}
-            placeholder="Message"
+            label="Message"
             aria-label="minimum height"
             minRows={3}
             variant="outlined"
@@ -91,10 +96,22 @@ export const Contact = () => {
             })}
           />
         </Stack>
+
         <Stack spacing={2}>
-          <Button variant="contained" type="submit">
+          <Button
+            className="button"
+            variant="contained"
+            type="submit"
+            sx={{
+              fontWeight: 100,
+              backgroundColor: "#4f6367ff",
+              color: "#eef5dbff",
+              "&:hover": { backgroundColor: "#4f6367ff" },
+            }}
+          >
             Send Message
           </Button>
+
           <Typography
             variant="caption"
             component="div"
