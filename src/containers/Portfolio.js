@@ -9,6 +9,22 @@ import GitHub from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
+import codeBlog from "../images/code-blog.png";
+import codeQuiz from "../images/code-quiz.png";
+import dayPlanner from "../images/day-planner.png";
+import eCommBE from "../images/eComm-be.png";
+import mentorMe from "../images/mentor-me.png";
+import noteTaker from "../images/note-taker.png";
+import passwordGenerator from "../images/password-generator.png";
+import regex from "../images/regex.png";
+import readMeGenerator from "../images/rmg-sample.png";
+import semanticRefactor from "../images/semantic-html-refactor.png";
+import socialNetwork from "../images/social-network.png";
+import teamProfile from "../images/team-profile.png";
+import virtualHoliday from "../images/virtual-holiday.png";
+import weatherDashboard from "../images/weather-dashboard.png";
+import workforcePlanner from "../images/workforce-planner.png";
+
 export const Portfolio = () => {
   return (
     <Grid container>
@@ -21,6 +37,7 @@ export const Portfolio = () => {
         {projects.map((item) => {
           const cols = item.featured ? 2 : 1;
           const rows = item.featured ? 2 : 1;
+          const height = item.featured ? "400rem" : "200rem";
 
           return (
             <ImageListItem key={item.img} cols={cols} rows={rows}>
@@ -30,6 +47,8 @@ export const Portfolio = () => {
                   srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.title}
                   loading="lazy"
+                  width="100%"
+                  height={height}
                 />
               </a>
               <ImageListItemBar
@@ -68,25 +87,7 @@ const projects = [
   //   gitHubRepo: "",
   // },
   {
-    img: "../images/social-network.png",
-    title: "Social Network API",
-    technologies: [
-      "MongoDB",
-      "Mongoose ODM",
-      "Express",
-      "Node",
-      "Nodemon",
-      "Date-fns",
-      "dotenv",
-      "Postman",
-      "Validator",
-    ],
-    deployedUrl:
-      "https://drive.google.com/file/d/1nzQcFIwDrSmo95g4HgRDpLq7Lse1V0mB/view?usp=sharing",
-    gitHubRepo: "https://github.com/C-Sim/social-network-api",
-  },
-  {
-    img: "../images/code-blog.png",
+    img: codeBlog,
     title: "Code Blog",
     technologies: [
       "Handlebars",
@@ -108,7 +109,26 @@ const projects = [
     featured: true,
   },
   {
-    img: "../images/regex.png",
+    img: socialNetwork,
+    title: "Social Network API",
+    technologies: [
+      "MongoDB",
+      "Mongoose ODM",
+      "Express",
+      "Node",
+      "Nodemon",
+      "Date-fns",
+      "dotenv",
+      "Postman",
+      "Validator",
+    ],
+    deployedUrl:
+      "https://drive.google.com/file/d/1nzQcFIwDrSmo95g4HgRDpLq7Lse1V0mB/view?usp=sharing",
+    gitHubRepo: "https://github.com/C-Sim/social-network-api",
+  },
+
+  {
+    img: regex,
     title: "RegEx Tutorial",
     technologies: ["RegEx", "Gist"],
     deployedUrl:
@@ -117,7 +137,7 @@ const projects = [
       "https://gist.github.com/C-Sim/96f7e9c795e5a16e5d032aa40f1aa665",
   },
   {
-    img: "../images/mentor-me.png",
+    img: mentorMe,
     title: "Mentor Me",
     technologies: [
       "Express-Session",
@@ -137,7 +157,7 @@ const projects = [
     featured: true,
   },
   {
-    img: "../images/eComm-be.png",
+    img: eCommBE,
     title: "eCommerce Back End",
     technologies: ["Sequelize", "Express", "MySQL", "Postman"],
     deployedUrl:
@@ -145,7 +165,7 @@ const projects = [
     gitHubRepo: "https://github.com/C-Sim/eComm-back-end",
   },
   {
-    img: "../images/workforce-planner.png",
+    img: workforcePlanner,
     title: "Workforce Planner",
     technologies: ["Node", "Inquirer", "MySQL", "Nodemon"],
     deployedUrl:
@@ -153,7 +173,7 @@ const projects = [
     gitHubRepo: "https://github.com/C-Sim/workforce-planner",
   },
   {
-    img: "../images/note-taker.png",
+    img: noteTaker,
     title: "Note Taker",
     technologies: ["JavaScript", "Express", "JSON", "Heroku"],
     deployedUrl: "https://guarded-tor-34423.herokuapp.com/",
@@ -161,7 +181,7 @@ const projects = [
     cols: 2,
   },
   {
-    img: "../images/team-profile.png",
+    img: teamProfile,
     title: "Team Profile Generator",
     technologies: ["JavaScript", "Inquirer", "Node", "Jest"],
     deployedUrl:
@@ -170,7 +190,7 @@ const projects = [
     cols: 2,
   },
   {
-    img: "../images/rmg-sample.png",
+    img: readMeGenerator,
     title: "ReadMe Generator",
     technologies: ["JavaScript", "Inquirer", "Node", "fs"],
     deployedUrl:
@@ -180,7 +200,15 @@ const projects = [
     cols: 2,
   },
   {
-    img: "../images/virtual-holiday.png",
+    img: weatherDashboard,
+    title: "Weather Dashboard",
+    technologies: ["JavaScript", "jQuery", "APIs", "JSON"],
+    deployedUrl: "https://c-sim.github.io/weather-dashboard/",
+    gitHubRepo: "https://github.com/C-Sim/weather-dashboard",
+  },
+
+  {
+    img: virtualHoliday,
     title: "Virtual Holiday",
     technologies: ["jQuery", "API", "Video", "Audio", "Typewriter"],
     deployedUrl: "https://c-sim.github.io/virtual-holiday/index.html",
@@ -188,35 +216,28 @@ const projects = [
     featured: true,
   },
   {
-    img: "../images/weather-dashboard.png",
-    title: "Weather Dashboard",
-    technologies: ["JavaScript", "jQuery", "APIs", "JSON"],
-    deployedUrl: "https://c-sim.github.io/weather-dashboard/",
-    gitHubRepo: "https://github.com/C-Sim/weather-dashboard",
-  },
-  {
-    img: "../images/day-planner.png",
+    img: dayPlanner,
     title: "Day Planner",
     technologies: ["JavaScript", "Bootstrap", "Moment.js"],
     deployedUrl: "https://c-sim.github.io/work_day_planner/",
     gitHubRepo: "https://github.com/C-Sim/work_day_planner",
   },
   {
-    img: "../images/code-quiz.png",
+    img: codeQuiz,
     title: "Code Quiz",
     technologies: ["JavaScript", "DOM", "Local Storage"],
     deployedUrl: "https://c-sim.github.io/code_quiz/",
     gitHubRepo: "https://github.com/C-Sim/code_quiz",
   },
   {
-    img: "../images/password-generator.png",
+    img: passwordGenerator,
     title: "Password Generator",
     technologies: ["JavaScript", "HTML", "CSS"],
     deployedUrl: "https://c-sim.github.io/password_generator/",
     gitHubRepo: "https://github.com/C-Sim/password_generator",
   },
   {
-    img: "../images/semantic-html-refactor.png",
+    img: semanticRefactor,
     title: "Semantic HTML Refactor",
     technologies: ["HTML" - "CSS"],
     deployedUrl: "https://c-sim.github.io/semantic-html-refactor/",

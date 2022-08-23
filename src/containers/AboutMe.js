@@ -1,5 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import kinkakuji from "../images/Kinkakuji.jpg";
+import me from "../images/CS.jpg";
 
 import Box from "@mui/material/Box";
 
@@ -11,7 +13,7 @@ export const AboutMe = () => {
           sx={{
             width: "100%",
             height: "100%",
-            backgroundImage: `url("../images/Kinkakuji.jpg")`,
+            backgroundImage: `url(${kinkakuji})`,
             // backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
@@ -19,8 +21,8 @@ export const AboutMe = () => {
       </Box>
 
       <Grid container spacing={4} sx={{ mb: 4 }}>
-        <Grid item xs={12} sm={4} md={4}>
-          <img src="../images/CS.jpg" />
+        <Grid item xs={12} sm={4} md={4} sx={{ borderRadius: "50%" }}>
+          <img src={me} width="150px" />
         </Grid>
 
         <Grid item xs={12} sm={8} md={8}>
