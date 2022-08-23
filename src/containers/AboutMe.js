@@ -21,8 +21,8 @@ export const AboutMe = () => {
       </Box>
 
       <Grid container spacing={4} sx={{ mb: 4 }}>
-        <Grid item xs={12} sm={4} md={4} sx={{ borderRadius: "50%" }}>
-          <img src={me} width="150px" />
+        <Grid item xs={12} sm={3} md={3}>
+          <img src={me} width="132px" className="me" />
         </Grid>
 
         <Grid item xs={12} sm={8} md={8}>

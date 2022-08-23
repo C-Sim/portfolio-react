@@ -91,6 +91,12 @@ body {
   background-color: var(--cadet-blue);
 }
 
+.me {
+  border-radius: 50%;
+  box-shadow: 0 0 18px 18px var(--cadet-blue);
+  margin-left: 1.8rem;
+}
+
 @media screen and (max-width: 600px) {
   .nav {
     height: 180px;

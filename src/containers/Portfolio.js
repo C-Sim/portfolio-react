@@ -24,6 +24,7 @@ import teamProfile from "../images/team-profile.png";
 import virtualHoliday from "../images/virtual-holiday.png";
 import weatherDashboard from "../images/weather-dashboard.png";
 import workforcePlanner from "../images/workforce-planner.png";
+import { borderColor } from "@mui/system";
 
 export const Portfolio = () => {
   return (
@@ -33,6 +34,7 @@ export const Portfolio = () => {
           width: "100%",
         }}
         cols={4}
+        spacing={4}
       >
         {projects.map((item) => {
           const cols = item.featured ? 2 : 1;
@@ -40,7 +42,12 @@ export const Portfolio = () => {
           const height = item.featured ? "400rem" : "200rem";
 
           return (
-            <ImageListItem key={item.img} cols={cols} rows={rows}>
+            <ImageListItem
+              key={item.img}
+              cols={cols}
+              rows={rows}
+              sx={{ border: 4, borderColor: "#4f6367ff" }}
+            >
               <a href={item.deployedUrl} target="_blank">
                 <img
                   src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -55,6 +62,7 @@ export const Portfolio = () => {
                 title={item.title}
                 sx={{
                   color: "#4f6367ff",
+                  backgroundColor: "#4f6367ff",
                   fontSize: 10,
                   fontWeight: 100,
                 }}
