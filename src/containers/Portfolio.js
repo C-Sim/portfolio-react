@@ -67,7 +67,55 @@ const projects = [
   //   deployedUrl: "",
   //   gitHubRepo: "",
   // },
-
+  {
+    img: "../images/social-network.png",
+    title: "Social Network API",
+    technologies: [
+      "MongoDB",
+      "Mongoose ODM",
+      "Express",
+      "Node",
+      "Nodemon",
+      "Date-fns",
+      "dotenv",
+      "Postman",
+      "Validator",
+    ],
+    deployedUrl:
+      "https://drive.google.com/file/d/1nzQcFIwDrSmo95g4HgRDpLq7Lse1V0mB/view?usp=sharing",
+    gitHubRepo: "https://github.com/C-Sim/social-network-api",
+  },
+  {
+    img: "../images/code-blog.png",
+    title: "Code Blog",
+    technologies: [
+      "Handlebars",
+      "bcrypt",
+      "Express-session",
+      "Connect-session-sequelize",
+      "MySQL2",
+      "Sequelize",
+      "Express",
+      "Node",
+      "Nodemon",
+      "dotenv",
+      "Heroku",
+      "HTML",
+      "CSS",
+    ],
+    deployedUrl: "https://obscure-everglades-69696.herokuapp.com/",
+    gitHubRepo: "https://github.com/C-Sim/code-blog",
+    featured: true,
+  },
+  {
+    img: "../images/regex.png",
+    title: "RegEx Tutorial",
+    technologies: ["RegEx", "Gist"],
+    deployedUrl:
+      "https://gist.github.com/C-Sim/96f7e9c795e5a16e5d032aa40f1aa665",
+    gitHubRepo:
+      "https://gist.github.com/C-Sim/96f7e9c795e5a16e5d032aa40f1aa665",
+  },
   {
     img: "../images/mentor-me.png",
     title: "Mentor Me",
