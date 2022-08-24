@@ -360,6 +360,11 @@ const skills = [
     title: "Stakeholder Management",
   },
   {
+    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+    title: "Supplier Management",
+  },
+
+  {
     img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
     title: "Data Analysis",
   },

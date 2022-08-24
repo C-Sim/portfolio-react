@@ -8,21 +8,21 @@ import Box from "@mui/material/Box";
 
 import { PageTitle } from "../components/atoms/PageTitle";
 
-import codeBlog from "../images/code-blog.png";
-import codeQuiz from "../images/code-quiz.png";
-import dayPlanner from "../images/day-planner.png";
-import eCommBE from "../images/eComm-be.png";
-import mentorMe from "../images/mentor-me.png";
-import noteTaker from "../images/note-taker.png";
-import passwordGenerator from "../images/password-generator.png";
-import regex from "../images/regex.png";
-import readMeGenerator from "../images/rmg-sample.png";
-import semanticRefactor from "../images/semantic-html-refactor.png";
-import socialNetwork from "../images/social-network.png";
-import teamProfile from "../images/team-profile.png";
-import virtualHoliday from "../images/virtual-holiday.png";
-import weatherDashboard from "../images/weather-dashboard.png";
-import workforcePlanner from "../images/workforce-planner.png";
+import codeBlog from "../components/atoms/images/code-blog.png";
+import codeQuiz from "../components/atoms/images/code-quiz.png";
+import dayPlanner from "../components/atoms/images/day-planner.png";
+import eCommBE from "../components/atoms/images/eComm-be.png";
+import mentorMe from "../components/atoms/images/mentor-me.png";
+import noteTaker from "../components/atoms/images/note-taker.png";
+import passwordGenerator from "../components/atoms/images/password-generator.png";
+import regex from "../components/atoms/images/regex.png";
+import readMeGenerator from "../components/atoms/images/rmg-sample.png";
+import semanticRefactor from "../components/atoms/images/semantic-html-refactor.png";
+import socialNetwork from "../components/atoms/images/social-network.png";
+import teamProfile from "../components/atoms/images/team-profile.png";
+import virtualHoliday from "../components/atoms/images/virtual-holiday.png";
+import weatherDashboard from "../components/atoms/images/weather-dashboard.png";
+import workforcePlanner from "../components/atoms/images/workforce-planner.png";
 
 export const Portfolio = () => {
   return (
