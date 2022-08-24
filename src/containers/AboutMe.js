@@ -8,16 +8,18 @@ import Box from "@mui/material/Box";
 export const AboutMe = () => {
   return (
     <Box>
-      <Box container sx={{ minHeight: "90vh" }}>
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            backgroundImage: `url(${kinkakuji})`,
-            // backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+      <Box
+        container
+        sx={{
+          minHeight: "90vh",
+          width: "100%",
+          height: "100%",
+          backgroundImage: `url(${kinkakuji})`,
+          // backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Box />
       </Box>
 
       <Grid container spacing={4} sx={{ mb: 4 }}>

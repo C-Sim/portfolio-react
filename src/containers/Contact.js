@@ -1,37 +1,94 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
-import IconButton from "@mui/material/IconButton";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
-import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Divider from "@mui/material/Divider";
-import Link from "@mui/material/Link";
 import FormHelperText from "@mui/material/FormHelperText";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import emailjs from "@emailjs/browser";
 
-export const Contact = () => {
+export const Contact = ({ isMobile }) => {
+  const [message] = "";
+
+  const form = useRef();
+
+  const [open, setOpen] = useState(false);
+
+  const [emailError, setEmailError] = useState();
+
   const {
     register,
     formState: { errors },
     handleSubmit,
+    setError,
+    clearErrors,
+    setValues,
   } = useForm({
     mode: "onBlur",
   });
 
-  const isMobile = useMediaQuery("(max-width:900px)");
+  // const isMobile = useMediaQuery("(max-width:900px)");
 
-  const onSubmit = (data) => {
-    // mailtoc.s
-    console.log(data);
+  // useEffect(() => {
+  //   if (data?.message?.success) {
+  //     handleOpenModal();
+  //   }
+  // }, [data]);
+
+  const handleOpenModal = () => {
+    setOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpen(false);
+
+    // setValues({ name: "", email: "", message: "" });
+  };
+
+  const onSubmit = (formData) => {
+    console.log(formData);
+    const messageInput = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    // message({
+    //   variables: {
+    //     messageInput,
+    //   },
+    // });
+
+    emailjs
+      .sendForm(
+        "service_doq4yxc",
+        "template_3zqd709",
+        form.current,
+        "ulS302XN5UlvLfEvu"
+      )
+      .then(
+        (result) => {
+          // fix
+          // setValues({ name: "", email: "", message: "" });
+
+          handleOpenModal();
+        },
+        (error) => {
+          setEmailError(true);
+        }
+      );
+
+    // mailto:cherelle.s@hotmail.com(messageInput)
   };
 
   return (
@@ -39,6 +96,18 @@ export const Contact = () => {
       sx={{ p: 3, mb: 4, minWidth: isMobile ? "90%" : "400px" }}
       elevation={6}
     >
+      <Dialog open={open} onClose={handleCloseModal}>
+        <DialogTitle>Message sent.</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Thanks for getting in touch...I'll respond as soon as I can!
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseModal}>OK</Button>
+        </DialogActions>
+      </Dialog>
+
       <Typography
         component="h1"
         variant="h4"
@@ -62,6 +131,7 @@ export const Contact = () => {
         sx={{ p: 3 }}
         spacing={4}
         onSubmit={handleSubmit(onSubmit)}
+        ref={form}
       >
         <Stack spacing={2}>
           <TextField
@@ -77,6 +147,7 @@ export const Contact = () => {
           <TextField
             error={!!errors.email}
             label="Email"
+            type="email"
             variant="outlined"
             helperText={!!errors.email ? "Please enter a valid email." : ""}
             {...register("email", {
@@ -112,14 +183,16 @@ export const Contact = () => {
             Send Message
           </Button>
 
-          <Typography
-            variant="caption"
-            component="div"
-            sx={{ color: "red" }}
-            align="center"
-          >
-            Failed to send message. Please try again.
-          </Typography>
+          {emailError && (
+            <Typography
+              variant="caption"
+              component="div"
+              sx={{ color: "red" }}
+              align="center"
+            >
+              Failed to send message. Please try again.
+            </Typography>
+          )}
         </Stack>
       </Stack>
     </Paper>

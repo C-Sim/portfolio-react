@@ -1,13 +1,9 @@
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ListSubheader from "@mui/material/ListSubheader";
 import IconButton from "@mui/material/IconButton";
-import InfoIcon from "@mui/icons-material/Info";
 import GitHub from "@mui/icons-material/GitHub";
-
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 
 import codeBlog from "../images/code-blog.png";
 import codeQuiz from "../images/code-quiz.png";
@@ -24,7 +20,6 @@ import teamProfile from "../images/team-profile.png";
 import virtualHoliday from "../images/virtual-holiday.png";
 import weatherDashboard from "../images/weather-dashboard.png";
 import workforcePlanner from "../images/workforce-planner.png";
-import { borderColor } from "@mui/system";
 
 export const Portfolio = () => {
   return (
@@ -48,7 +43,7 @@ export const Portfolio = () => {
               rows={rows}
               sx={{ border: 4, borderColor: "#4f6367ff" }}
             >
-              <a href={item.deployedUrl} target="_blank">
+              <a href={item.deployedUrl} target="_blank" rel="noreferrer">
                 <img
                   src={`${item.img}?w=248&fit=crop&auto=format`}
                   srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}

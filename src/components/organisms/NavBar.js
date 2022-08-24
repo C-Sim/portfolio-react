@@ -4,22 +4,15 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Navigate, NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const NavBar = ({ navItems }) => {
   const isMobile = useMediaQuery("(max-width:600px)");
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -46,9 +39,6 @@ export const NavBar = ({ navItems }) => {
           <NavLink
             to={item.href}
             className={({ isActive }) => (isActive ? "link-active" : "link")}
-            // onClick={() => {
-            //   navigate(item.href, { replace: true });
-            // }}
           >
             {item.label}
           </NavLink>
