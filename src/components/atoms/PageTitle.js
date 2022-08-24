@@ -10,11 +10,15 @@ export const PageTitle = ({ title }) => {
         component="h1"
         gutterBottom
         align="center"
-        sx={{ paddingTop: 3 }}
+        sx={{
+          paddingTop: 0.8,
+          color: "#eef5dbff",
+          fontWeight: 100,
+          fontSize: 32,
+        }}
       >
         {title}
       </Typography>
-      <Divider />
     </Box>
   );
 };

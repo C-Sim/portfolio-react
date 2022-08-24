@@ -3,174 +3,198 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+
+import { PageTitle } from "../components/atoms/PageTitle";
 
 export const CV = () => {
   return (
-    <Grid container>
-      <ImageList
-        sx={{
-          width: "100%",
-        }}
-        cols={12}
-      >
-        <ImageListItem key="Subheader" cols={12} sx={{ paddingBottom: "8px" }}>
-          <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
-            Front End
-          </ListSubheader>
-        </ImageListItem>
-        {frontEnd.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-            <Typography
-              position="below"
-              sx={{
-                textAlign: "center",
-                color: "#4f6367ff",
-                fontSize: "0.72rem",
-                fontWeight: 100,
-                paddingTop: "8px",
-              }}
-            >
-              {item.title}
-            </Typography>
-          </ImageListItem>
-        ))}
-      </ImageList>
+    <Box>
+      <PageTitle title="Skills" />
 
-      <ImageList
-        sx={{
-          width: "100%",
-        }}
-        cols={12}
-      >
-        <ImageListItem key="Subheader" cols={12} sx={{ paddingBottom: "8px" }}>
-          <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
-            Back End
-          </ListSubheader>
-        </ImageListItem>
-        {backEnd.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-            <Typography
-              position="below"
-              sx={{
-                textAlign: "center",
-                color: "#4f6367ff",
-                fontSize: "0.72rem",
-                fontWeight: 100,
-                paddingTop: "8px",
-              }}
-            >
-              {item.title}
-            </Typography>
-          </ImageListItem>
-        ))}
-      </ImageList>
-
-      <ImageList
-        sx={{
-          width: "100%",
-        }}
-        cols={12}
-      >
-        <ImageListItem key="Subheader" cols={12} sx={{ paddingBottom: "8px" }}>
-          <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
-            Development Tools
-          </ListSubheader>
-        </ImageListItem>
-        {tools.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-            <Typography
-              position="below"
-              sx={{
-                textAlign: "center",
-                color: "#4f6367ff",
-                fontSize: "0.72rem",
-                fontWeight: 100,
-                paddingTop: "8px",
-              }}
-            >
-              {item.title}
-            </Typography>
-          </ImageListItem>
-        ))}
-      </ImageList>
-
-      <ImageList
-        sx={{
-          width: "100%",
-        }}
-        cols={12}
-      >
-        <ImageListItem key="Subheader" cols={12} sx={{ paddingBottom: "8px" }}>
-          <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
-            Professional Skills
-          </ListSubheader>
-        </ImageListItem>
-        {skills.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-            <Typography
-              position="below"
-              sx={{
-                textAlign: "center",
-                color: "#4f6367ff",
-                fontSize: "0.72rem",
-                fontWeight: 100,
-                paddingTop: "8px",
-              }}
-            >
-              {item.title}
-            </Typography>
-          </ImageListItem>
-        ))}
-      </ImageList>
-
-      <Typography
-        sx={{
-          textAlign: "center",
-          width: "100vw",
-          padding: 4,
-          color: "#eef5dbff",
-          fontWeight: 100,
-          fontSize: "0.9rem",
-        }}
-      >
-        For more detail on my skills and experience, please find a copy of my CV{" "}
-        <a
+      <Grid container>
+        <ImageList
           sx={{
+            width: "100%",
+          }}
+          cols={12}
+        >
+          <ImageListItem
+            key="Subheader"
+            cols={12}
+            sx={{ paddingBottom: "8px" }}
+          >
+            <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+              Front End
+            </ListSubheader>
+          </ImageListItem>
+          {frontEnd.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <Typography
+                position="below"
+                sx={{
+                  textAlign: "center",
+                  color: "#4f6367ff",
+                  fontSize: "0.72rem",
+                  fontWeight: 100,
+                  paddingTop: "8px",
+                }}
+              >
+                {item.title}
+              </Typography>
+            </ImageListItem>
+          ))}
+        </ImageList>
+
+        <ImageList
+          sx={{
+            width: "100%",
+          }}
+          cols={12}
+        >
+          <ImageListItem
+            key="Subheader"
+            cols={12}
+            sx={{ paddingBottom: "8px" }}
+          >
+            <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+              Back End
+            </ListSubheader>
+          </ImageListItem>
+          {backEnd.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <Typography
+                position="below"
+                sx={{
+                  textAlign: "center",
+                  color: "#4f6367ff",
+                  fontSize: "0.72rem",
+                  fontWeight: 100,
+                  paddingTop: "8px",
+                }}
+              >
+                {item.title}
+              </Typography>
+            </ImageListItem>
+          ))}
+        </ImageList>
+
+        <ImageList
+          sx={{
+            width: "100%",
+          }}
+          cols={12}
+        >
+          <ImageListItem
+            key="Subheader"
+            cols={12}
+            sx={{ paddingBottom: "8px" }}
+          >
+            <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+              Development Tools
+            </ListSubheader>
+          </ImageListItem>
+          {tools.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <Typography
+                position="below"
+                sx={{
+                  textAlign: "center",
+                  color: "#4f6367ff",
+                  fontSize: "0.72rem",
+                  fontWeight: 100,
+                  paddingTop: "8px",
+                }}
+              >
+                {item.title}
+              </Typography>
+            </ImageListItem>
+          ))}
+        </ImageList>
+
+        <ImageList
+          sx={{
+            width: "100%",
+          }}
+          cols={12}
+        >
+          <ImageListItem
+            key="Subheader"
+            cols={12}
+            sx={{ paddingBottom: "8px" }}
+          >
+            <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+              Professional Skills
+            </ListSubheader>
+          </ImageListItem>
+          {skills.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <Typography
+                position="below"
+                sx={{
+                  textAlign: "center",
+                  color: "#4f6367ff",
+                  fontSize: "0.72rem",
+                  fontWeight: 100,
+                  paddingTop: "8px",
+                }}
+              >
+                {item.title}
+              </Typography>
+            </ImageListItem>
+          ))}
+        </ImageList>
+
+        <Typography
+          sx={{
+            textAlign: "center",
+            width: "100vw",
+            padding: 4,
             color: "#4f6367ff",
             fontWeight: 100,
-            textDecoration: "none",
+            fontSize: "0.9rem",
           }}
-          href="https://resume.io/r/O2cItbDOx"
         >
-          here
-        </a>
-        .
-      </Typography>
-    </Grid>
+          For more detail on my skills and experience, please find a copy of my
+          CV{" "}
+          <a
+            sx={{
+              color: "#4f6367ff",
+              fontWeight: 100,
+              textDecoration: "none",
+            }}
+            href="https://resume.io/r/O2cItbDOx"
+          >
+            here
+          </a>
+          .
+        </Typography>
+      </Grid>
+    </Box>
   );
 };
 

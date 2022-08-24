@@ -1,5 +1,18 @@
+* {
+  font-family: "Work Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  background-color: var(--cadet-blue);
+}
+
 .App {
   text-align: center;
+  padding: 0px;
 }
 
 .App-logo {
@@ -46,16 +59,6 @@
   --golden: #d5bb64;
 }
 
-* {
-  font-family: "Work Sans", sans-serif;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0px;
-  background-color: var(--cadet-blue);
-}
-
 .nav {
   height: 56px;
   display: flex;
@@ -73,6 +76,11 @@ body {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+  color: var(--beige);
+}
+
 .link {
   color: var(--cadet-blue);
 }
@@ -83,7 +91,8 @@ body {
 
 .link:hover,
 .icon:hover,
-.button:hover {
+.button:hover,
+a:hover {
   color: var(--golden);
 }
 
@@ -93,7 +102,7 @@ body {
 
 .me {
   border-radius: 50%;
-  box-shadow: 0 0 18px 18px var(--cadet-blue);
+  box-shadow: 0 0 24px 24px var(--cadet-blue);
   margin-left: 1.8rem;
 }
 

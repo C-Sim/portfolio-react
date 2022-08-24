@@ -4,6 +4,9 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import IconButton from "@mui/material/IconButton";
 import GitHub from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+
+import { PageTitle } from "../components/atoms/PageTitle";
 
 import codeBlog from "../images/code-blog.png";
 import codeQuiz from "../images/code-quiz.png";
@@ -23,61 +26,64 @@ import workforcePlanner from "../images/workforce-planner.png";
 
 export const Portfolio = () => {
   return (
-    <Grid container>
-      <ImageList
-        sx={{
-          width: "100%",
-        }}
-        cols={4}
-        spacing={4}
-      >
-        {projects.map((item) => {
-          const cols = item.featured ? 2 : 1;
-          const rows = item.featured ? 2 : 1;
-          const height = item.featured ? "400rem" : "200rem";
+    <Box>
+      <PageTitle title="Projects" />
+      <Grid container>
+        <ImageList
+          sx={{
+            width: "100%",
+          }}
+          cols={4}
+          spacing={4}
+        >
+          {projects.map((item) => {
+            const cols = item.featured ? 2 : 1;
+            const rows = item.featured ? 2 : 1;
+            const height = item.featured ? "400rem" : "200rem";
 
-          return (
-            <ImageListItem
-              key={item.img}
-              cols={cols}
-              rows={rows}
-              sx={{ border: 4, borderColor: "#4f6367ff" }}
-            >
-              <a href={item.deployedUrl} target="_blank" rel="noreferrer">
-                <img
-                  src={`${item.img}?w=248&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                  width="100%"
-                  height={height}
+            return (
+              <ImageListItem
+                key={item.img}
+                cols={cols}
+                rows={rows}
+                sx={{ border: 4, borderColor: "#4f6367ff" }}
+              >
+                <a href={item.deployedUrl} target="_blank" rel="noreferrer">
+                  <img
+                    src={`${item.img}?w=248&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                    width="100%"
+                    height={height}
+                  />
+                </a>
+                <ImageListItemBar
+                  title={item.title}
+                  sx={{
+                    color: "#4f6367ff",
+                    backgroundColor: "#4f6367ff",
+                    fontSize: 10,
+                    fontWeight: 100,
+                  }}
+                  actionIcon={
+                    <IconButton
+                      sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                      aria-label={`GitHub repo for ${item.title}`}
+                      href={item.gitHubRepo}
+                      target="_blank"
+                      className="icon"
+                    >
+                      <GitHub />
+                    </IconButton>
+                  }
                 />
-              </a>
-              <ImageListItemBar
-                title={item.title}
-                sx={{
-                  color: "#4f6367ff",
-                  backgroundColor: "#4f6367ff",
-                  fontSize: 10,
-                  fontWeight: 100,
-                }}
-                actionIcon={
-                  <IconButton
-                    sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                    aria-label={`GitHub repo for ${item.title}`}
-                    href={item.gitHubRepo}
-                    target="_blank"
-                    className="icon"
-                  >
-                    <GitHub />
-                  </IconButton>
-                }
-              />
-            </ImageListItem>
-          );
-        })}
-      </ImageList>
-    </Grid>
+              </ImageListItem>
+            );
+          })}
+        </ImageList>
+      </Grid>
+    </Box>
   );
 };
 

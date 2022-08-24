@@ -6,10 +6,8 @@ import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
-import FormControl from "@mui/material/FormControl";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Divider from "@mui/material/Divider";
-import FormHelperText from "@mui/material/FormHelperText";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -18,8 +16,6 @@ import DialogTitle from "@mui/material/DialogTitle";
 import emailjs from "@emailjs/browser";
 
 export const Contact = ({ isMobile }) => {
-  const [message] = "";
-
   const form = useRef();
 
   const [open, setOpen] = useState(false);
@@ -30,20 +26,11 @@ export const Contact = ({ isMobile }) => {
     register,
     formState: { errors },
     handleSubmit,
-    setError,
-    clearErrors,
-    setValues,
   } = useForm({
     mode: "onBlur",
   });
 
   // const isMobile = useMediaQuery("(max-width:900px)");
-
-  // useEffect(() => {
-  //   if (data?.message?.success) {
-  //     handleOpenModal();
-  //   }
-  // }, [data]);
 
   const handleOpenModal = () => {
     setOpen(true);
@@ -55,20 +42,7 @@ export const Contact = ({ isMobile }) => {
     // setValues({ name: "", email: "", message: "" });
   };
 
-  const onSubmit = (formData) => {
-    console.log(formData);
-    const messageInput = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    // message({
-    //   variables: {
-    //     messageInput,
-    //   },
-    // });
-
+  const onSubmit = () => {
     emailjs
       .sendForm(
         "service_doq4yxc",
@@ -87,8 +61,6 @@ export const Contact = ({ isMobile }) => {
           setEmailError(true);
         }
       );
-
-    // mailto:cherelle.s@hotmail.com(messageInput)
   };
 
   return (
@@ -139,7 +111,7 @@ export const Contact = ({ isMobile }) => {
             label="Name"
             variant="outlined"
             helperText={!!errors.name ? "Please enter a valid name." : ""}
-            {...register("name", {
+            {...register("from_name", {
               required: true,
             })}
           />
@@ -150,7 +122,7 @@ export const Contact = ({ isMobile }) => {
             type="email"
             variant="outlined"
             helperText={!!errors.email ? "Please enter a valid email." : ""}
-            {...register("email", {
+            {...register("reply_to", {
               required: true,
             })}
           />

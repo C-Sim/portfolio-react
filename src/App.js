@@ -11,6 +11,7 @@ export const App = () => {
       <Container
         component="page"
         sx={{
+          padding: 0,
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
@@ -43,7 +44,7 @@ export const App = () => {
             },
           ]}
         />
-        <Container component="main" sx={{ marginTop: 12 }}>
+        <Container component="main" sx={{ marginTop: 12, padding: 0 }}>
           <AppRoutes />
         </Container>
         <Footer
