@@ -309,6 +309,10 @@ const tools = [
     title: "Heroku",
   },
   {
+    img: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg",
+    title: "Figma",
+  },
+  {
     img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     title: "Postman",
   },
