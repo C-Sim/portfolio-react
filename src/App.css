@@ -1,3 +1,12 @@
+:root {
+  --powder-blue: #b8d8d8ff;
+  --cadet-blue: #c8c8c8;
+  --deep-space-sparkle: #4f6367ff;
+  --beige: #eef5dbff;
+  --orange-red-crayola: #fe5f55ff;
+  --golden: #d5bb64;
+}
+
 * {
   font-family: "Work Sans", sans-serif;
   box-sizing: border-box;
@@ -6,8 +15,6 @@
 body {
   margin: 0px;
   padding: 0px;
-
-  background-color: var(--cadet-blue);
 }
 
 .App {
@@ -50,15 +57,6 @@ body {
   }
 }
 
-:root {
-  --powder-blue: #b8d8d8ff;
-  --cadet-blue: #c8c8c8;
-  --deep-space-sparkle: #4f6367ff;
-  --beige: #eef5dbff;
-  --orange-red-crayola: #fe5f55ff;
-  --golden: #d5bb64;
-}
-
 .nav {
   height: 56px;
   display: flex;
@@ -78,7 +76,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--beige);
+  color: white;
 }
 
 .link {

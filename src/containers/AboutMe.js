@@ -39,12 +39,13 @@ export const AboutMe = () => {
           <img src={me} width="148px" className="me" />
         </Grid>
         <Grid item xs={12} sm={8} md={8}>
-          <Paper
+          <Box
             align="center"
             sx={{
               marginTop: 4,
               padding: 1,
-              backgroundColor: "#c8c8c8",
+              // backgroundColor: "#c8c8c8",
+              // opacity: 0.2,
               borderColor: "#eef5dbff",
             }}
           >
@@ -91,7 +92,7 @@ export const AboutMe = () => {
               </a>
               .
             </Typography>
-          </Paper>
+          </Box>
         </Grid>
       </Grid>
     </Box>

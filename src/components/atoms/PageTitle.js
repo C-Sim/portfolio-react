@@ -12,7 +12,7 @@ export const PageTitle = ({ title }) => {
         align="center"
         sx={{
           paddingTop: 0.8,
-          color: "#eef5dbff",
+          color: "#c8c8c8",
           fontWeight: 100,
           fontSize: 32,
         }}
