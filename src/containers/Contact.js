@@ -65,7 +65,7 @@ export const Contact = ({ isMobile }) => {
 
   return (
     <Paper
-      sx={{ p: 3, mb: 4, minWidth: isMobile ? "90%" : "400px" }}
+      sx={{ p: 3, m: 4, mb: 6, minWidth: isMobile ? "90%" : "400px" }}
       elevation={6}
     >
       <Dialog open={open} onClose={handleCloseModal}>

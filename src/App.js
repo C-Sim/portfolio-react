@@ -4,15 +4,18 @@ import { GitHub, LinkedIn, Instagram } from "@mui/icons-material";
 import { AppRoutes } from "./AppRoutes";
 import { NavBar } from "./components/organisms/NavBar";
 import { Footer } from "./components/organisms/Footer";
+import Box from "@mui/material/Box";
 
 export const App = () => {
   return (
     <Router>
-      <Container
-        component="page"
+      <Box
+        // component="page"
         sx={{
           padding: 0,
+          margin: 0,
           minHeight: "100vh",
+          width: "100vw",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -44,9 +47,9 @@ export const App = () => {
             },
           ]}
         />
-        <Container component="main" sx={{ marginTop: 12, padding: 0 }}>
+        <Box className="main" sx={{ marginTop: 8, padding: 0 }}>
           <AppRoutes />
-        </Container>
+        </Box>
         <Footer
           footerItems={[
             {
@@ -66,7 +69,7 @@ export const App = () => {
             },
           ]}
         />
-      </Container>
+      </Box>
     </Router>
   );
 };

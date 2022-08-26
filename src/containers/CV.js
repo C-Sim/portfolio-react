@@ -290,7 +290,7 @@ const backEnd = [
   },
   {
     img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "RESTful APIs",
+    title: "REST APIs",
   },
 
   {
@@ -311,6 +311,10 @@ const tools = [
   {
     img: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg",
     title: "Figma",
+  },
+  {
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jira/jira-original-wordmark.svg",
+    title: "Jira",
   },
   {
     img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",

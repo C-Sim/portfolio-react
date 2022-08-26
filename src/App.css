@@ -1,7 +1,7 @@
 :root {
   --powder-blue: #b8d8d8ff;
   --cadet-blue: #c8c8c8;
-  --deep-space-sparkle: #4f6367ff;
+  --deep-space-sparkle: rgb(79, 99, 103);
   --beige: #eef5dbff;
   --orange-red-crayola: #fe5f55ff;
   --golden: #d5bb64;
@@ -96,6 +96,18 @@ a:hover {
 
 .button:hover {
   background-color: var(--cadet-blue);
+}
+
+.main {
+  width: 100%;
+}
+
+.image-bar {
+  color: var(--beige);
+  position: relative;
+  top: 105%;
+  right: 24px;
+  font-size: 8px;
 }
 
 .me {

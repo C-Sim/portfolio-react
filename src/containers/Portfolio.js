@@ -26,15 +26,24 @@ import workforcePlanner from "../components/atoms/images/workforce-planner.png";
 
 export const Portfolio = () => {
   return (
-    <Box>
+    <Box
+      sx={{
+        margin: 2,
+      }}
+    >
       <PageTitle title="Projects" />
-      <Grid container>
+      <Grid
+        container
+        sx={{
+          width: "100%",
+        }}
+      >
         <ImageList
           sx={{
-            width: "100%",
+            margin: "8px",
           }}
           cols={4}
-          spacing={4}
+          spacing={8}
         >
           {projects.map((item) => {
             const cols = item.featured ? 2 : 1;
