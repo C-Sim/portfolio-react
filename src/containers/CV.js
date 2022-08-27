@@ -286,16 +286,16 @@ const backEnd = [
     title: "Sequelize",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://raw.githubusercontent.com/SBoudrias/Inquirer.js/master/assets/inquirer_readme.svg?sanitize=true",
     title: "Inquirer",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://gitlab.com/uploads/-/system/project/avatar/9910889/875327.png",
     title: "REST APIs",
   },
 
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://avatars.githubusercontent.com/u/32372333?s=280&v=4",
     title: "Axios",
   },
 ];
@@ -326,7 +326,7 @@ const tools = [
     title: "JawsDB",
   },
   {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
+    img: "https://remotepm.lucianocastro.com/wp-content/uploads/2020/11/agile_logo.png",
     title: "Agile",
   },
   {
@@ -342,7 +342,7 @@ const tools = [
     title: "MVC",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
     title: "DOM",
   },
 ];
@@ -361,7 +361,7 @@ const skills = [
     title: "People Management",
   },
   {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
+    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
     title: "Leadership & Influencing",
   },
   {
@@ -378,15 +378,15 @@ const skills = [
     title: "Data Analysis",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
     title: "Commercial Awareness",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
     title: "Continuous Improvement",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
     title: "Business Development",
   },
 ];
