@@ -27,8 +27,10 @@ export const AboutMe = () => {
           title="Photo taken on my travels in Kyoto, Japan"
           sx={{
             textAlign: "right",
-            fontSize: "8px",
+            fontSize: 8,
             fontWeight: 100,
+            backgroundColor: "rgb(79, 99, 103, 0)",
+            fontStyle: "italic",
           }}
         />
       </Box>
@@ -44,9 +46,6 @@ export const AboutMe = () => {
               sx={{
                 marginTop: 8,
                 padding: 1,
-                // backgroundColor: "#c8c8c8",
-                // opacity: 0.2,
-                borderColor: "#eef5dbff",
               }}
             >
               <Typography sx={{ mb: 2, color: "#4f6367ff", fontWeight: 100 }}>
@@ -60,7 +59,7 @@ export const AboutMe = () => {
                 sx={{ mt: 2, mb: 2, color: "#4f6367ff", fontWeight: 100 }}
               >
                 Passionate about merging logic with creativity to create
-                functional and aesthetically pleasing outputs.
+                functional apps, intuitive APIs and aesthetic interfaces.
               </Typography>
 
               <Divider />
@@ -81,7 +80,7 @@ export const AboutMe = () => {
                   mt: 2,
                   color: "#4f6367ff",
                   fontWeight: 100,
-                  fontSize: 12,
+                  fontSize: 14,
                 }}
               >
                 Find more detail{" "}

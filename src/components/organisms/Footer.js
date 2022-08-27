@@ -2,7 +2,7 @@ import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
+import BottomNavigation from "@mui/material/BottomNavigation";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import ListItem from "@mui/material/ListItem";
@@ -36,6 +36,7 @@ export const Footer = ({ footerItems }) => {
                   pl: 4,
                   pr: 4,
                 }}
+                key={item.label}
                 href={item.href}
                 target="_blank"
                 className="icon"

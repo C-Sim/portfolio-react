@@ -14,12 +14,12 @@ export const App = () => {
         sx={{
           padding: 0,
           margin: 0,
-          minHeight: "100vh",
-          width: "100vw",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          minHeight: "100vh",
+          width: "100vw",
           background: `linear-gradient(
             to top,
             rgba(20, 20, 20, 0.2),
@@ -51,6 +51,7 @@ export const App = () => {
           <AppRoutes />
         </Box>
         <Footer
+          className="footer"
           footerItems={[
             {
               label: "LinkedIn",

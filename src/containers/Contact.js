@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
-import TextareaAutosize from "@mui/material/TextareaAutosize";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
@@ -14,6 +13,8 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import emailjs from "@emailjs/browser";
+
+import { PageTitle } from "../components/atoms/PageTitle";
 
 export const Contact = ({ isMobile }) => {
   const form = useRef();
@@ -38,8 +39,6 @@ export const Contact = ({ isMobile }) => {
 
   const handleCloseModal = () => {
     setOpen(false);
-
-    // setValues({ name: "", email: "", message: "" });
   };
 
   const onSubmit = () => {
@@ -52,9 +51,6 @@ export const Contact = ({ isMobile }) => {
       )
       .then(
         (result) => {
-          // fix
-          // setValues({ name: "", email: "", message: "" });
-
           handleOpenModal();
         },
         (error) => {
@@ -65,7 +61,7 @@ export const Contact = ({ isMobile }) => {
 
   return (
     <Paper
-      sx={{ p: 3, m: 4, mb: 6, minWidth: isMobile ? "90%" : "400px" }}
+      sx={{ p: 3, m: 4, minWidth: isMobile ? "90%" : "400px" }}
       elevation={6}
     >
       <Dialog open={open} onClose={handleCloseModal}>
@@ -80,20 +76,14 @@ export const Contact = ({ isMobile }) => {
         </DialogActions>
       </Dialog>
 
-      <Typography
-        component="h1"
-        variant="h4"
-        align="center"
-        sx={{ fontWeight: 200, color: "#4f6367ff" }}
-      >
-        Contact Me
-      </Typography>
+      <PageTitle title="Contact me" />
 
       <Typography
         align="center"
-        sx={{ p: 3, fontWeight: 100, color: "#4f6367ff" }}
+        sx={{ p: 3, pt: 1, fontWeight: 100, color: "#4f6367ff" }}
       >
-        Send me a message using the form below
+        Send me a message using the form or contact me via the links in the
+        footer.
       </Typography>
 
       <Divider />
@@ -107,21 +97,21 @@ export const Contact = ({ isMobile }) => {
       >
         <Stack spacing={2}>
           <TextField
-            error={!!errors.name}
+            error={!!errors.from_name}
             label="Name"
             variant="outlined"
-            helperText={!!errors.name ? "Please enter a valid name." : ""}
+            helperText={!!errors.from_name ? "Please enter a valid name." : ""}
             {...register("from_name", {
               required: true,
             })}
           />
 
           <TextField
-            error={!!errors.email}
+            error={!!errors.reply_to}
             label="Email"
             type="email"
             variant="outlined"
-            helperText={!!errors.email ? "Please enter a valid email." : ""}
+            helperText={!!errors.reply_to ? "Please enter a valid email." : ""}
             {...register("reply_to", {
               required: true,
             })}
@@ -131,7 +121,8 @@ export const Contact = ({ isMobile }) => {
             error={!!errors.message}
             label="Message"
             aria-label="minimum height"
-            minRows={3}
+            multiline
+            minRows={8}
             variant="outlined"
             helperText={!!errors.message ? "Please enter a valid message." : ""}
             {...register("message", {

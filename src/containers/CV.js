@@ -9,7 +9,7 @@ import { PageTitle } from "../components/atoms/PageTitle";
 
 export const CV = () => {
   return (
-    <Box>
+    <Box sx={{ margin: 8, mt: 4, mb: 4 }}>
       <PageTitle title="Skills" />
 
       <Grid container>

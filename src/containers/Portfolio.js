@@ -29,6 +29,7 @@ export const Portfolio = () => {
     <Box
       sx={{
         margin: 2,
+        mt: 4,
       }}
     >
       <PageTitle title="Projects" />
@@ -40,7 +41,7 @@ export const Portfolio = () => {
       >
         <ImageList
           sx={{
-            margin: "8px",
+            margin: "18px",
           }}
           cols={4}
           spacing={8}
@@ -55,7 +56,7 @@ export const Portfolio = () => {
                 key={item.img}
                 cols={cols}
                 rows={rows}
-                sx={{ border: 4, borderColor: "#4f6367ff" }}
+                sx={{ border: 4, borderColor: "#4f6367ff", margin: 2 }}
               >
                 <a href={item.deployedUrl} target="_blank" rel="noreferrer">
                   <img
@@ -97,7 +98,8 @@ export const Portfolio = () => {
 };
 
 const projects = [
-  // {
+  // TEMPLATE FOR FUTURE ADDITIONS
+  //  {
   //   img: "",
   //   title: "",
   //   technologies: [],
