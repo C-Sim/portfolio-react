@@ -12,6 +12,7 @@ My personal portfolio showcasing my skills experience and recent projects. Using
 - MaterialUI
 - EmailJS
 - Node
+- GitHub Pages
 
 ## Screenshots
 
