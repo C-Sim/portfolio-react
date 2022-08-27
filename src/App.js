@@ -1,5 +1,4 @@
 import { HashRouter as Router } from "react-router-dom";
-import Container from "@mui/material/Container";
 import { GitHub, LinkedIn, Instagram } from "@mui/icons-material";
 import { AppRoutes } from "./AppRoutes";
 import { NavBar } from "./components/organisms/NavBar";
@@ -13,7 +12,6 @@ export const App = () => {
   return (
     <Router>
       <Box
-        // component="page"
         sx={{
           padding: 0,
           margin: 0,

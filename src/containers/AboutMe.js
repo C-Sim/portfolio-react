@@ -17,9 +17,7 @@ export const AboutMe = () => {
   return (
     <Box>
       <Box
-        // container
         sx={{
-          // minHeight: "90vh",
           width: "100vw",
           height: "100vh",
           backgroundImage: `url(${kinkakuji})`,
@@ -43,7 +41,6 @@ export const AboutMe = () => {
       <Box sx={{ mb: 4, width: "100vw", margin: 0 }}>
         <Grid
           container
-          // spacing={4}
           sx={{
             mb: 4,
             ml: 0,
@@ -62,7 +59,7 @@ export const AboutMe = () => {
             md={3}
             sx={{ mt: 6, pl: 0, ml: isMobile ? 0 : 4 }}
           >
-            <img src={me} width="148px" className="me" />
+            <img src={me} alt={"me"} width="148px" className="me" />
           </Grid>
           <Grid item xs={10} sm={8} md={8}>
             <Box

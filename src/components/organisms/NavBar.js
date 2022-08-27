@@ -88,9 +88,6 @@ export const NavBar = ({ navItems }) => {
                 className={({ isActive }) =>
                   isActive ? "link-active" : "link"
                 }
-                // onClick={() => {
-                //   navigate(item.href, { replace: true });
-                // }}
               >
                 {item.label}
               </NavLink>

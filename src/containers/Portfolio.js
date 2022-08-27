@@ -89,7 +89,6 @@ export const Portfolio = () => {
                   sx={{
                     color: "#4f6367ff",
                     backgroundColor: "#4f6367ff",
-                    // fontSize: "0.5rem",
                     fontWeight: 100,
                     lineHeight: "18px",
                   }}
