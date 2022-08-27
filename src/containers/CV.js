@@ -330,19 +330,19 @@ const tools = [
     title: "Agile",
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+    img: "https://i0.wp.com/www.ogmcs.com/wp-content/uploads/2019/03/tdd-banner.jpg?fit=696%2C393",
     title: "TDD",
   },
   {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+    img: "https://miro.medium.com/max/300/0*goJuBKoyL-zZX4RB.png",
     title: "OOP",
   },
   {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+    img: "https://cdn2.iconfinder.com/data/icons/programming-76/512/MVC-model-view-controller-512.png",
     title: "MVC",
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+    img: "https://static.thenounproject.com/png/1320675-200.png",
     title: "DOM",
   },
 ];
