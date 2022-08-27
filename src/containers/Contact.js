@@ -60,7 +60,10 @@ export const Contact = () => {
   };
 
   return (
-    <Paper sx={{ p: isMobile ? 2 : 3, m: 4, minWidth: "90%" }} elevation={6}>
+    <Paper
+      sx={{ p: isMobile ? 2 : 3, m: 4, minWidth: isMobile ? "80%" : "90%" }}
+      elevation={6}
+    >
       <Dialog open={open} onClose={handleCloseModal}>
         <DialogTitle>Message sent.</DialogTitle>
         <DialogContent>
@@ -119,7 +122,7 @@ export const Contact = () => {
             label="Message"
             aria-label="minimum height"
             multiline
-            minRows={8}
+            minRows={4}
             variant="outlined"
             helperText={!!errors.message ? "Please enter a valid message." : ""}
             {...register("message", {

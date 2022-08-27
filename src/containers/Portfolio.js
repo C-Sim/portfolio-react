@@ -26,6 +26,8 @@ import weatherDashboard from "../components/atoms/images/weather-dashboard.png";
 import workforcePlanner from "../components/atoms/images/workforce-planner.png";
 
 export const Portfolio = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
     <Box
       sx={{
@@ -43,6 +45,12 @@ export const Portfolio = () => {
         <ImageList
           sx={{
             margin: "18px",
+            display: isMobile ? "flex" : "",
+            flexDirection: isMobile ? "column" : "",
+            alignItems: isMobile ? "center" : "",
+            justifyContent: isMobile ? "center" : "",
+            // width: isMobile ? "300px" : "",
+            // height: isMobile ? "300px" : "",
           }}
           cols={4}
           spacing={8}
@@ -74,7 +82,7 @@ export const Portfolio = () => {
                   sx={{
                     color: "#4f6367ff",
                     backgroundColor: "#4f6367ff",
-                    fontSize: 10,
+                    fontSize: 8,
                     fontWeight: 100,
                   }}
                   actionIcon={
