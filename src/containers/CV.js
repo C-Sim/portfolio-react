@@ -14,38 +14,34 @@ export const CV = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
-    <Box sx={{ margin: 8, mt: 4, mb: 4 }}>
+    <Box sx={{ margin: isMobile ? 2 : 8, mt: 4, mb: 4 }}>
       <PageTitle title="Skills" />
 
       <Grid container>
-        <ImageList
-          sx={{
-            width: isMobile ? "25%" : "100%",
-            display: isMobile ? "flex" : "",
-            flexDirection: isMobile ? "column" : "",
-            alignItems: isMobile ? "center" : "",
-            justifyContent: isMobile ? "top" : "",
-            flexWrap: "wrap",
-          }}
+        <ImageListItem
+          key="Subheader"
           cols={12}
+          sx={{ width: "100%", paddingBottom: "8px" }}
         >
-          <ImageListItem
-            key="Subheader"
-            cols={12}
-            sx={{ paddingBottom: "8px" }}
+          <ListSubheader
+            component="div"
+            sx={{
+              lineHeight: "32px",
+            }}
           >
-            <ListSubheader
-              component="div"
-              sx={{
-                lineHeight: isMobile ? "64px" : "32px",
-                textAlign: isMobile ? "center" : "",
-              }}
-            >
-              Front End
-            </ListSubheader>
-          </ImageListItem>
+            Front End
+          </ListSubheader>
+        </ImageListItem>
+
+        <ImageList cols={12} sx={{ width: "100%" }}>
           {frontEnd.map((item) => (
-            <ImageListItem key={item.img} sx={{ m: 3 }}>
+            <ImageListItem
+              key={item.img}
+              sx={{
+                m: 3,
+                width: "4rem",
+              }}
+            >
               <img
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -68,131 +64,30 @@ export const CV = () => {
           ))}
         </ImageList>
 
-        <ImageList
-          sx={{
-            width: isMobile ? "25%" : "100%",
-            display: isMobile ? "flex" : "",
-            flexDirection: isMobile ? "column" : "",
-            alignItems: isMobile ? "center" : "",
-            justifyContent: isMobile ? "top" : "",
-            flexWrap: "wrap",
-          }}
+        <ImageListItem
+          key="Subheader"
           cols={12}
+          sx={{ width: "100%", paddingBottom: "8px" }}
         >
-          <ImageListItem
-            key="Subheader"
-            cols={12}
-            sx={{ paddingBottom: "8px" }}
+          <ListSubheader
+            component="div"
+            sx={{
+              lineHeight: "32px",
+            }}
           >
-            <ListSubheader
-              component="div"
-              sx={{
-                lineHeight: isMobile ? "64px" : "32px",
-                textAlign: isMobile ? "center" : "",
-              }}
-            >
-              Back End
-            </ListSubheader>
-          </ImageListItem>
+            Back End
+          </ListSubheader>
+        </ImageListItem>
+
+        <ImageList cols={12} sx={{ width: "100%" }}>
           {backEnd.map((item) => (
-            <ImageListItem key={item.img} sx={{ m: 3 }}>
-              <img
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-              />
-              <Typography
-                position="below"
-                sx={{
-                  textAlign: "center",
-                  color: "#4f6367ff",
-                  fontSize: "0.72rem",
-                  fontWeight: 100,
-                  paddingTop: "8px",
-                }}
-              >
-                {item.title}
-              </Typography>
-            </ImageListItem>
-          ))}
-        </ImageList>
-
-        <ImageList
-          sx={{
-            width: isMobile ? "25%" : "100%",
-            display: isMobile ? "flex" : "",
-            flexDirection: isMobile ? "column" : "",
-            alignItems: isMobile ? "center" : "",
-            justifyContent: isMobile ? "top" : "",
-            flexWrap: "wrap",
-          }}
-          cols={12}
-        >
-          <ImageListItem
-            key="Subheader"
-            cols={12}
-            sx={{ paddingBottom: "8px" }}
-          >
-            <ListSubheader
-              component="div"
-              sx={{ lineHeight: "32px", textAlign: isMobile ? "center" : "" }}
-            >
-              Development Tools
-            </ListSubheader>
-          </ImageListItem>
-          {tools.map((item) => (
-            <ImageListItem key={item.img} sx={{ m: 3 }}>
-              <img
-                src={`${item.img}?w=248&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-              />
-              <Typography
-                position="below"
-                sx={{
-                  textAlign: "center",
-                  color: "#4f6367ff",
-                  fontSize: "0.72rem",
-                  fontWeight: 100,
-                  paddingTop: "8px",
-                }}
-              >
-                {item.title}
-              </Typography>
-            </ImageListItem>
-          ))}
-        </ImageList>
-
-        <ImageList
-          sx={{
-            width: isMobile ? "25%" : "100%",
-            display: isMobile ? "flex" : "",
-            flexDirection: isMobile ? "column" : "",
-            alignItems: isMobile ? "center" : "",
-            justifyContent: isMobile ? "top" : "",
-            flexWrap: "wrap",
-          }}
-          cols={12}
-        >
-          <ImageListItem
-            key="Subheader"
-            cols={12}
-            sx={{ paddingBottom: "8px" }}
-          >
-            <ListSubheader
-              component="div"
+            <ImageListItem
+              key={item.img}
               sx={{
-                lineHeight: "32px",
-                textAlign: isMobile ? "center" : "",
+                m: 3,
+                width: "4rem",
               }}
             >
-              Professional Skills
-            </ListSubheader>
-          </ImageListItem>
-          {skills.map((item) => (
-            <ImageListItem key={item.img} sx={{ m: 3 }}>
               <img
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -205,6 +100,98 @@ export const CV = () => {
                   textAlign: "center",
                   color: "#4f6367ff",
                   fontSize: "0.72rem",
+                  fontWeight: 100,
+                  paddingTop: "8px",
+                }}
+              >
+                {item.title}
+              </Typography>
+            </ImageListItem>
+          ))}
+        </ImageList>
+
+        <ImageListItem
+          key="Subheader"
+          cols={12}
+          sx={{ width: "100%", paddingBottom: "8px" }}
+        >
+          <ListSubheader
+            component="div"
+            sx={{
+              lineHeight: "32px",
+            }}
+          >
+            Development Tools
+          </ListSubheader>
+        </ImageListItem>
+
+        <ImageList cols={12} sx={{ width: "100%" }}>
+          {tools.map((item) => (
+            <ImageListItem
+              key={item.img}
+              sx={{
+                m: 3,
+                width: "4rem",
+              }}
+            >
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <Typography
+                position="below"
+                sx={{
+                  textAlign: "center",
+                  color: "#4f6367ff",
+                  fontSize: "0.72rem",
+                  fontWeight: 100,
+                  paddingTop: "8px",
+                }}
+              >
+                {item.title}
+              </Typography>
+            </ImageListItem>
+          ))}
+        </ImageList>
+
+        <ImageListItem
+          key="Subheader"
+          cols={12}
+          sx={{ width: "100%", paddingBottom: "8px" }}
+        >
+          <ListSubheader
+            component="div"
+            sx={{
+              lineHeight: "32px",
+            }}
+          >
+            Professional Skills
+          </ListSubheader>
+        </ImageListItem>
+
+        <ImageList cols={12} sx={{ width: "100%" }}>
+          {skills.map((item) => (
+            <ImageListItem
+              key={item.img}
+              sx={{
+                m: 3,
+                width: "4rem",
+              }}
+            >
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+              <Typography
+                position="below"
+                sx={{
+                  textAlign: "center",
+                  color: "#4f6367ff",
+                  fontSize: "0.64rem",
                   fontWeight: 100,
                   paddingTop: "8px",
                 }}
@@ -298,14 +285,14 @@ const backEnd = [
     title: "JavaScript",
   },
   {
-    img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
+    img: "https://www.mangoitsolutions.com/wp-content/uploads/2022/01/becomeamernstackdeveloper-mobile-300x279.png",
     title: "MERN",
   },
-
   {
-    img: "https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg",
-    title: "Jest",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain-wordmark.svg",
+    title: "GraphQL",
   },
+
   {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
     title: "MySQL ",
@@ -323,10 +310,6 @@ const backEnd = [
     title: "MongoDB",
   },
   {
-    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain-wordmark.svg",
-    title: "GraphQL",
-  },
-  {
     img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sequelize/sequelize-original-wordmark.svg",
     title: "Sequelize",
   },
@@ -342,6 +325,10 @@ const backEnd = [
   {
     img: "https://avatars.githubusercontent.com/u/32372333?s=280&v=4",
     title: "Axios",
+  },
+  {
+    img: "https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg",
+    title: "Jest",
   },
 ];
 
@@ -416,7 +403,7 @@ const skills = [
 
   {
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2R1Y3QlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60",
-    title: "Data Analysis",
+    title: "Data Analysis & Strategy",
   },
   {
     img: "https://img.capital.com/imgs/glossary/750xx/Supply%20definition_0.jpg",
