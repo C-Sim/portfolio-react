@@ -349,20 +349,20 @@ const tools = [
 
 const skills = [
   {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+    img: "https://images.unsplash.com/photo-1595013694368-aab1b4f70dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2plY3QlMjBtYW5hZ2VtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
     title: "Project Management",
   },
   {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+    img: "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2R1Y3QlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60",
     title: "Product Development",
   },
   {
     img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "People Management",
+    title: "Leadership & Management",
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Leadership & Influencing",
+    img: "https://images.unsplash.com/photo-1499540633125-484965b60031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGVhZGVyc2hpcCUyMHRlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+    title: "Negotiation & Influencing",
   },
   {
     img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
@@ -374,7 +374,7 @@ const skills = [
   },
 
   {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2R1Y3QlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60",
     title: "Data Analysis",
   },
   {
