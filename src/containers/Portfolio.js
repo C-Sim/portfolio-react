@@ -40,6 +40,7 @@ export const Portfolio = () => {
         container
         sx={{
           width: "100%",
+          justifyContent: "center",
         }}
       >
         <ImageList
@@ -49,8 +50,6 @@ export const Portfolio = () => {
             flexDirection: isMobile ? "column" : "",
             alignItems: isMobile ? "center" : "",
             justifyContent: isMobile ? "center" : "",
-            // width: isMobile ? "300px" : "",
-            // height: isMobile ? "300px" : "",
           }}
           cols={4}
           spacing={8}
@@ -63,27 +62,36 @@ export const Portfolio = () => {
             return (
               <ImageListItem
                 key={item.img}
+                className="portfolio-card"
                 cols={cols}
                 rows={rows}
-                sx={{ border: 4, borderColor: "#4f6367ff", margin: 2 }}
+                sx={{
+                  border: 4,
+                  borderColor: "#4f6367ff",
+                  margin: 2,
+                  width: isMobile ? "300px" : "auto",
+                }}
               >
                 <a href={item.deployedUrl} target="_blank" rel="noreferrer">
                   <img
                     src={`${item.img}?w=248&fit=crop&auto=format`}
                     srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
+                    className="portfolio-img"
                     loading="lazy"
                     width="100%"
                     height={height}
                   />
                 </a>
                 <ImageListItemBar
-                  title={item.title}
+                  subtitle={item.title}
+                  className="project-title"
                   sx={{
                     color: "#4f6367ff",
                     backgroundColor: "#4f6367ff",
-                    fontSize: 8,
+                    // fontSize: "0.5rem",
                     fontWeight: 100,
+                    lineHeight: "18px",
                   }}
                   actionIcon={
                     <IconButton

@@ -7,8 +7,12 @@ import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import { PageTitle } from "../components/atoms/PageTitle";
+import { textFieldClasses } from "@mui/material";
+import { textAlign } from "@mui/system";
 
 export const CV = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
     <Box sx={{ margin: 8, mt: 4, mb: 4 }}>
       <PageTitle title="Skills" />
@@ -16,7 +20,12 @@ export const CV = () => {
       <Grid container>
         <ImageList
           sx={{
-            width: "100%",
+            width: isMobile ? "25%" : "100%",
+            display: isMobile ? "flex" : "",
+            flexDirection: isMobile ? "column" : "",
+            alignItems: isMobile ? "center" : "",
+            justifyContent: isMobile ? "top" : "",
+            flexWrap: "wrap",
           }}
           cols={12}
         >
@@ -25,12 +34,18 @@ export const CV = () => {
             cols={12}
             sx={{ paddingBottom: "8px" }}
           >
-            <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+            <ListSubheader
+              component="div"
+              sx={{
+                lineHeight: isMobile ? "64px" : "32px",
+                textAlign: isMobile ? "center" : "",
+              }}
+            >
               Front End
             </ListSubheader>
           </ImageListItem>
           {frontEnd.map((item) => (
-            <ImageListItem key={item.img}>
+            <ImageListItem key={item.img} sx={{ m: 3 }}>
               <img
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -55,7 +70,12 @@ export const CV = () => {
 
         <ImageList
           sx={{
-            width: "100%",
+            width: isMobile ? "25%" : "100%",
+            display: isMobile ? "flex" : "",
+            flexDirection: isMobile ? "column" : "",
+            alignItems: isMobile ? "center" : "",
+            justifyContent: isMobile ? "top" : "",
+            flexWrap: "wrap",
           }}
           cols={12}
         >
@@ -64,12 +84,18 @@ export const CV = () => {
             cols={12}
             sx={{ paddingBottom: "8px" }}
           >
-            <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+            <ListSubheader
+              component="div"
+              sx={{
+                lineHeight: isMobile ? "64px" : "32px",
+                textAlign: isMobile ? "center" : "",
+              }}
+            >
               Back End
             </ListSubheader>
           </ImageListItem>
           {backEnd.map((item) => (
-            <ImageListItem key={item.img}>
+            <ImageListItem key={item.img} sx={{ m: 3 }}>
               <img
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -94,7 +120,12 @@ export const CV = () => {
 
         <ImageList
           sx={{
-            width: "100%",
+            width: isMobile ? "25%" : "100%",
+            display: isMobile ? "flex" : "",
+            flexDirection: isMobile ? "column" : "",
+            alignItems: isMobile ? "center" : "",
+            justifyContent: isMobile ? "top" : "",
+            flexWrap: "wrap",
           }}
           cols={12}
         >
@@ -103,12 +134,15 @@ export const CV = () => {
             cols={12}
             sx={{ paddingBottom: "8px" }}
           >
-            <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+            <ListSubheader
+              component="div"
+              sx={{ lineHeight: "32px", textAlign: isMobile ? "center" : "" }}
+            >
               Development Tools
             </ListSubheader>
           </ImageListItem>
           {tools.map((item) => (
-            <ImageListItem key={item.img}>
+            <ImageListItem key={item.img} sx={{ m: 3 }}>
               <img
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -133,7 +167,12 @@ export const CV = () => {
 
         <ImageList
           sx={{
-            width: "100%",
+            width: isMobile ? "25%" : "100%",
+            display: isMobile ? "flex" : "",
+            flexDirection: isMobile ? "column" : "",
+            alignItems: isMobile ? "center" : "",
+            justifyContent: isMobile ? "top" : "",
+            flexWrap: "wrap",
           }}
           cols={12}
         >
@@ -142,12 +181,18 @@ export const CV = () => {
             cols={12}
             sx={{ paddingBottom: "8px" }}
           >
-            <ListSubheader component="div" sx={{ lineHeight: "32px" }}>
+            <ListSubheader
+              component="div"
+              sx={{
+                lineHeight: "32px",
+                textAlign: isMobile ? "center" : "",
+              }}
+            >
               Professional Skills
             </ListSubheader>
           </ImageListItem>
           {skills.map((item) => (
-            <ImageListItem key={item.img}>
+            <ImageListItem key={item.img} sx={{ m: 3 }}>
               <img
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -234,7 +279,7 @@ const frontEnd = [
     title: "Bulma",
   },
   {
-    img: "https://toppng.com/uploads/preview/momentjs-logo-11609369329b8uomvn3ng.png",
+    img: "https://seeklogo.com/images/M/momentjs-logo-4DF96FC733-seeklogo.com.png",
     title: "Moment",
   },
   {
@@ -349,7 +394,7 @@ const tools = [
 
 const skills = [
   {
-    img: "https://cdn.appdesign.dev/wp-content/uploads/2019/07/project-manager-para-empresas.png",
+    img: "https://www.productplan.com/uploads/Stages-in-Product-Management-Process.png",
     title: "Project Management",
   },
   {
@@ -374,7 +419,7 @@ const skills = [
     title: "Data Analysis",
   },
   {
-    img: "https://www.productplan.com/uploads/Stages-in-Product-Management-Process.png",
+    img: "https://img.capital.com/imgs/glossary/750xx/Supply%20definition_0.jpg",
     title: "Supplier Management",
   },
 
@@ -387,7 +432,7 @@ const skills = [
     title: "Business Development",
   },
   {
-    img: "https://i-nexus.com/app/uploads/2020/07/all_you_need_to_know_the_ultimate_guide_to_continuous_improvement@2x.png",
+    img: "https://cdn.thefabricator.com/a/the-manufacturing-fundamentals-of-follow-through-in-continuous-improvement-1626819095.jpg",
     title: "Continuous Improvement",
   },
 ];
