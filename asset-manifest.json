@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.3d3040a4.css",
-    "main.js": "/portfolio-react/static/js/main.90932066.js",
+    "main.css": "/portfolio-react/static/css/main.4f854461.css",
+    "main.js": "/portfolio-react/static/js/main.316e6f99.js",
     "static/media/semantic-html-refactor.png": "/portfolio-react/static/media/semantic-html-refactor.24ea692e01fe6e3dbef7.png",
     "static/media/virtual-holiday.png": "/portfolio-react/static/media/virtual-holiday.5b3999c822e471de24b3.png",
     "static/media/mentor-me.png": "/portfolio-react/static/media/mentor-me.25b97edbc3778677ec0c.png",
@@ -20,11 +20,11 @@
     "static/media/note-taker.png": "/portfolio-react/static/media/note-taker.6aa52e739b9a48a9fddc.png",
     "static/media/workforce-planner.png": "/portfolio-react/static/media/workforce-planner.0ef3caa28a431bd66569.png",
     "index.html": "/portfolio-react/index.html",
-    "main.3d3040a4.css.map": "/portfolio-react/static/css/main.3d3040a4.css.map",
-    "main.90932066.js.map": "/portfolio-react/static/js/main.90932066.js.map"
+    "main.4f854461.css.map": "/portfolio-react/static/css/main.4f854461.css.map",
+    "main.316e6f99.js.map": "/portfolio-react/static/js/main.316e6f99.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d3040a4.css",
-    "static/js/main.90932066.js"
+    "static/css/main.4f854461.css",
+    "static/js/main.316e6f99.js"
   ]
 }
