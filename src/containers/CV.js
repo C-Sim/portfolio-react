@@ -234,15 +234,15 @@ const frontEnd = [
     title: "Bulma",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://toppng.com/uploads/preview/momentjs-logo-11609369329b8uomvn3ng.png",
     title: "Moment",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://iconape.com/wp-content/files/pm/370894/svg/370894.svg",
     title: "FontAwesome",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://jquery-plugins.net/image/plugin/typewriterjs-javascript-plugin-for-cool-typewriter-effect.png",
     title: "Typewriter",
   },
 ];
@@ -322,7 +322,7 @@ const tools = [
     title: "Postman",
   },
   {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+    img: "https://www.jawsdb.com/theme/images/shark.svg",
     title: "JawsDB",
   },
   {
