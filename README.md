@@ -2,7 +2,7 @@
 
 My personal portfolio showcasing my skills experience and recent projects. Using React technologies, Material UI component library and EmailJS for automated contact.
 
-[Deployed URL](...)
+[Deployed URL](https://c-sim.github.io/portfolio-react/)
 
 ## Technologies
 
@@ -19,28 +19,28 @@ My personal portfolio showcasing my skills experience and recent projects. Using
 <details>
 <summary>Landing Page</summary>
 
-![landing](...)
+![landing](./src/components/atoms/screenshots/landing.png)
 
 </details>
 
 <details>
 <summary>Portfolio</summary>
 
-![portfolio](...)
+![portfolio](./src/components/atoms/screenshots/portfolio.png)
 
 </details>
 
 <details>
 <summary>Skills</summary>
 
-![skills](...)
+![skills](./src/components/atoms/screenshots/skills.png)
 
 </details>
 
 <details>
 <summary>Contact</summary>
 
-![contact](...)
+![contact](./src/components/atoms/screenshots/contact.png)
 
 </details>
 
