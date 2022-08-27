@@ -16,7 +16,7 @@ import emailjs from "@emailjs/browser";
 
 import { PageTitle } from "../components/atoms/PageTitle";
 
-export const Contact = ({ isMobile }) => {
+export const Contact = () => {
   const form = useRef();
 
   const [open, setOpen] = useState(false);
@@ -31,7 +31,7 @@ export const Contact = ({ isMobile }) => {
     mode: "onBlur",
   });
 
-  // const isMobile = useMediaQuery("(max-width:900px)");
+  const isMobile = useMediaQuery("(max-width:600px)");
 
   const handleOpenModal = () => {
     setOpen(true);
@@ -60,10 +60,7 @@ export const Contact = ({ isMobile }) => {
   };
 
   return (
-    <Paper
-      sx={{ p: 3, m: 4, minWidth: isMobile ? "90%" : "400px" }}
-      elevation={6}
-    >
+    <Paper sx={{ p: isMobile ? 2 : 3, m: 4, minWidth: "90%" }} elevation={6}>
       <Dialog open={open} onClose={handleCloseModal}>
         <DialogTitle>Message sent.</DialogTitle>
         <DialogContent>

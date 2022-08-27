@@ -5,8 +5,11 @@ import { AppRoutes } from "./AppRoutes";
 import { NavBar } from "./components/organisms/NavBar";
 import { Footer } from "./components/organisms/Footer";
 import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const App = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
     <Router>
       <Box
@@ -47,7 +50,7 @@ export const App = () => {
             },
           ]}
         />
-        <Box className="main" sx={{ marginTop: 8, padding: 0 }}>
+        <Box className="main" sx={{ marginTop: isMobile ? 6 : 8, padding: 0 }}>
           <AppRoutes />
         </Box>
         <Footer

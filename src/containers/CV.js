@@ -4,6 +4,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import { PageTitle } from "../components/atoms/PageTitle";
 

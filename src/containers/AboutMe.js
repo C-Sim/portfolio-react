@@ -6,9 +6,13 @@ import kinkakuji from "../components/atoms/images/Kinkakuji.jpg";
 import me from "../components/atoms/images/CS.jpg";
 
 import Box from "@mui/material/Box";
-import { Divider, ImageListItemBar } from "@mui/material";
+import Divider from "@mui/material/Divider";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const AboutMe = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   return (
     <Box>
       <Box
@@ -24,10 +28,10 @@ export const AboutMe = () => {
       >
         <ImageListItemBar
           className="image-bar"
-          title="Photo taken on my travels in Kyoto, Japan"
+          subtitle="Photo taken on my travels in Kyoto, Japan"
           sx={{
             textAlign: "right",
-            fontSize: 8,
+            fontSize: "8px",
             fontWeight: 100,
             backgroundColor: "rgb(79, 99, 103, 0)",
             fontStyle: "italic",
@@ -36,15 +40,34 @@ export const AboutMe = () => {
       </Box>
 
       <Box sx={{ mb: 4, width: "100vw", margin: 0 }}>
-        <Grid container spacing={4} sx={{ mb: 4, marginLeft: 0 }}>
-          <Grid item xs={12} sm={3} md={3} sx={{ mt: 6, ml: 4 }}>
+        <Grid
+          container
+          // spacing={4}
+          sx={{
+            mb: 4,
+            ml: 0,
+            display: "flex",
+            flexDirection: isMobile ? "column" : "row",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <Grid
+            item
+            className="about-container"
+            xs={12}
+            sm={3}
+            md={3}
+            sx={{ mt: 6, pl: 0, ml: isMobile ? 0 : 4 }}
+          >
             <img src={me} width="148px" className="me" />
           </Grid>
-          <Grid item xs={12} sm={8} md={8}>
+          <Grid item xs={10} sm={8} md={8}>
             <Box
               align="center"
               sx={{
-                marginTop: 8,
+                mt: isMobile ? 1 : 8,
                 padding: 1,
               }}
             >

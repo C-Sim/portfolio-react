@@ -5,6 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import GitHub from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import { PageTitle } from "../components/atoms/PageTitle";
 
