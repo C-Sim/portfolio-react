@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import Container from "@mui/material/Container";
 import { GitHub, LinkedIn, Instagram } from "@mui/icons-material";
 import { AppRoutes } from "./AppRoutes";

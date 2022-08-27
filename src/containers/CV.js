@@ -349,7 +349,7 @@ const tools = [
 
 const skills = [
   {
-    img: "https://images.unsplash.com/photo-1595013694368-aab1b4f70dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2plY3QlMjBtYW5hZ2VtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
+    img: "https://cdn.appdesign.dev/wp-content/uploads/2019/07/project-manager-para-empresas.png",
     title: "Project Management",
   },
   {
@@ -357,20 +357,16 @@ const skills = [
     title: "Product Development",
   },
   {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
+    img: "https://images.unsplash.com/photo-1632137349293-14d5e9f0e0ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
     title: "Leadership & Management",
   },
   {
-    img: "https://images.unsplash.com/photo-1499540633125-484965b60031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGVhZGVyc2hpcCUyMHRlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+    img: "https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2013/06/24135803/Bplans-Headers-13.jpg",
+    title: "Stakeholder Engagement",
+  },
+  {
+    img: "https://www.venafi.com/sites/default/files/content/blog/2020-02/handshake_newblog.png",
     title: "Negotiation & Influencing",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Stakeholder Management",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Supplier Management",
   },
 
   {
@@ -378,15 +374,20 @@ const skills = [
     title: "Data Analysis",
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+    img: "https://www.productplan.com/uploads/Stages-in-Product-Management-Process.png",
+    title: "Supplier Management",
+  },
+
+  {
+    img: "https://cdn.pixabay.com/photo/2017/03/27/21/31/money-2180330__480.jpg",
     title: "Commercial Awareness",
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Continuous Improvement",
+    img: "https://www.socialsciencespace.com/wp-content/uploads/Management-studies.jpg",
+    title: "Business Development",
   },
   {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Business Development",
+    img: "https://i-nexus.com/app/uploads/2020/07/all_you_need_to_know_the_ultimate_guide_to_continuous_improvement@2x.png",
+    title: "Continuous Improvement",
   },
 ];

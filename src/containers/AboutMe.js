@@ -1,6 +1,5 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Paper from "@mui/material/Paper";
 
 import kinkakuji from "../components/atoms/images/Kinkakuji.jpg";
 import me from "../components/atoms/images/CS.jpg";
@@ -9,6 +8,8 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import useMediaQuery from "@mui/material/useMediaQuery";
+
+import { NavLink } from "react-router-dom";
 
 export const AboutMe = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -106,18 +107,7 @@ export const AboutMe = () => {
                   fontSize: 14,
                 }}
               >
-                Find more detail{" "}
-                <a
-                  sx={{
-                    textDecoration: "none",
-                    color: "#d5bb64",
-                    fontWeight: 100,
-                  }}
-                  href="/cv"
-                >
-                  here
-                </a>
-                .
+                Find more detail <NavLink to="/cv">here</NavLink>.
               </Typography>
             </Box>
           </Grid>
