@@ -24,7 +24,9 @@ import teamProfile from "../components/atoms/images/team-profile.png";
 import virtualHoliday from "../components/atoms/images/virtual-holiday.png";
 import weatherDashboard from "../components/atoms/images/weather-dashboard.png";
 import workforcePlanner from "../components/atoms/images/workforce-planner.png";
-import weCare from "../components/atoms/images/weCare.png";
+import weCare from "../components/atoms/images/wecare.png";
+import readingList from "../components/atoms/images/reading-list.png";
+import textEditor from "../components/atoms/images/text-editor.png";
 
 export const Portfolio = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -117,33 +119,47 @@ export const Portfolio = () => {
 const projects = [
   // TEMPLATE FOR FUTURE ADDITIONS
   //  {
-  //   img: "",
+  //   img: ,
   //   title: "",
   //   technologies: [],
   //   deployedUrl: "",
   //   gitHubRepo: "",
   // },
   {
-    img: "weCare",
+    img: weCare,
     title: "WeCare",
-    technologies: ["React", "GraphQL", "MongoDB", "MUI", "Node"],
+    technologies: [
+      "React",
+      "GraphQL",
+      "MongoDB",
+      "MUI",
+      "GoogleMaps API",
+      "Node",
+    ],
     deployedUrl: "https://fathomless-bayou-99698.herokuapp.com/",
     gitHubRepo: "https://github.com/C-Sim/we-care-react",
     featured: true,
   },
+  {
+    img: readingList,
+    title: "Reading List",
+    technologies: [
+      "React",
+      "GoogleBooks API",
+      "MongoDB",
+      "GraphQL",
+      "Heroku",
+      "Node",
+    ],
+    deployedUrl: "https://mysterious-refuge-63370.herokuapp.com/",
+    gitHubRepo: "https://github.com/C-Sim/reading-list-mern",
+  },
   // {
-  //   img: "",
-  //   title: "",
-  //   technologies: [],
-  //   deployedUrl: "",
-  //   gitHubRepo: "",
-  // },
-  // {
-  //   img: "",
-  //   title: "",
-  //   technologies: [],
-  //   deployedUrl: "",
-  //   gitHubRepo: "",
+  //   img: textEditor,
+  //   title: "Text Editor",
+  //   technologies: ["Express", "Nodemon", "Concurrently", "PWA", "Webpack", "IndexedDB", "Heroku"],
+  //   deployedUrl: "https://arcane-lowlands-25183.herokuapp.com/",
+  //   gitHubRepo: "https://github.com/C-Sim/pwa-text-editor",
   // },
 
   {
@@ -166,7 +182,7 @@ const projects = [
     ],
     deployedUrl: "https://obscure-everglades-69696.herokuapp.com/",
     gitHubRepo: "https://github.com/C-Sim/code-blog",
-    featured: true,
+    // featured: true,
   },
   {
     img: socialNetwork,
