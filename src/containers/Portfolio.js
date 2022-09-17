@@ -24,6 +24,7 @@ import teamProfile from "../components/atoms/images/team-profile.png";
 import virtualHoliday from "../components/atoms/images/virtual-holiday.png";
 import weatherDashboard from "../components/atoms/images/weather-dashboard.png";
 import workforcePlanner from "../components/atoms/images/workforce-planner.png";
+import weCare from "../components/atoms/images/weCare.png";
 
 export const Portfolio = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -122,6 +123,29 @@ const projects = [
   //   deployedUrl: "",
   //   gitHubRepo: "",
   // },
+  {
+    img: "weCare",
+    title: "WeCare",
+    technologies: ["React", "GraphQL", "MongoDB", "MUI", "Node"],
+    deployedUrl: "https://fathomless-bayou-99698.herokuapp.com/",
+    gitHubRepo: "https://github.com/C-Sim/we-care-react",
+    featured: true,
+  },
+  // {
+  //   img: "",
+  //   title: "",
+  //   technologies: [],
+  //   deployedUrl: "",
+  //   gitHubRepo: "",
+  // },
+  // {
+  //   img: "",
+  //   title: "",
+  //   technologies: [],
+  //   deployedUrl: "",
+  //   gitHubRepo: "",
+  // },
+
   {
     img: codeBlog,
     title: "Code Blog",
