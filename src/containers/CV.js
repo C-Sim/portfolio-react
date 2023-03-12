@@ -314,6 +314,10 @@ const backEnd = [
     title: "Sequelize",
   },
   {
+    img: "https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg",
+    title: "Jest",
+  },
+  {
     img: "https://raw.githubusercontent.com/SBoudrias/Inquirer.js/master/assets/inquirer_readme.svg?sanitize=true",
     title: "Inquirer",
   },
@@ -325,10 +329,6 @@ const backEnd = [
   {
     img: "https://avatars.githubusercontent.com/u/32372333?s=280&v=4",
     title: "Axios",
-  },
-  {
-    img: "https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg",
-    title: "Jest",
   },
 ];
 
@@ -358,7 +358,7 @@ const tools = [
     title: "JawsDB",
   },
   {
-    img: "https://remotepm.lucianocastro.com/wp-content/uploads/2020/11/agile_logo.png",
+    img: "https://productfolio.com/wp-content/uploads/2019/07/agile-method.png",
     title: "Agile",
   },
   {

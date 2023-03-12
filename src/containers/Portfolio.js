@@ -176,7 +176,7 @@ const projects = [
       "CSS",
     ],
     deployedUrl: "https://obscure-everglades-69696.herokuapp.com/",
-    gitHubRepo: "https://github.com/C-Sim/code-blog",
+    gitHubRepo: "https://github.com/C-Sim/code-blog/tree/dev",
     // featured: true,
   },
   {
@@ -206,6 +206,22 @@ const projects = [
       "https://gist.github.com/C-Sim/96f7e9c795e5a16e5d032aa40f1aa665",
     gitHubRepo:
       "https://gist.github.com/C-Sim/96f7e9c795e5a16e5d032aa40f1aa665",
+  },
+  {
+    img: eCommBE,
+    title: "eCommerce Back End",
+    technologies: ["Sequelize", "Express", "MySQL", "Postman"],
+    deployedUrl:
+      "https://drive.google.com/file/d/1ZsGv_8xPxgYXTafwbNoTRKxS7y16YVn6/view?usp=sharing",
+    gitHubRepo: "https://github.com/C-Sim/eComm-back-end",
+  },
+  {
+    img: workforcePlanner,
+    title: "Workforce Planner",
+    technologies: ["Node", "Inquirer", "MySQL", "Nodemon"],
+    deployedUrl:
+      "https://drive.google.com/file/d/1eIAQ1se44oPhi-0MjxnWu9Bn-g4_2Jlm/view?usp=sharing",
+    gitHubRepo: "https://github.com/C-Sim/workforce-planner",
   },
   {
     img: weCare,
@@ -244,21 +260,14 @@ const projects = [
   //   featured: true,
   // },
   {
-    img: eCommBE,
-    title: "eCommerce Back End",
-    technologies: ["Sequelize", "Express", "MySQL", "Postman"],
-    deployedUrl:
-      "https://drive.google.com/file/d/1ZsGv_8xPxgYXTafwbNoTRKxS7y16YVn6/view?usp=sharing",
-    gitHubRepo: "https://github.com/C-Sim/eComm-back-end",
+    img: virtualHoliday,
+    title: "Virtual Holiday",
+    technologies: ["jQuery", "API", "Video", "Audio", "Typewriter"],
+    deployedUrl: "https://c-sim.github.io/virtual-holiday/index.html",
+    gitHubRepo: "https://github.com/C-Sim/virtual-holiday",
+    featured: true,
   },
-  {
-    img: workforcePlanner,
-    title: "Workforce Planner",
-    technologies: ["Node", "Inquirer", "MySQL", "Nodemon"],
-    deployedUrl:
-      "https://drive.google.com/file/d/1eIAQ1se44oPhi-0MjxnWu9Bn-g4_2Jlm/view?usp=sharing",
-    gitHubRepo: "https://github.com/C-Sim/workforce-planner",
-  },
+
   {
     img: noteTaker,
     title: "Note Taker",
@@ -294,14 +303,6 @@ const projects = [
     gitHubRepo: "https://github.com/C-Sim/weather-dashboard",
   },
 
-  {
-    img: virtualHoliday,
-    title: "Virtual Holiday",
-    technologies: ["jQuery", "API", "Video", "Audio", "Typewriter"],
-    deployedUrl: "https://c-sim.github.io/virtual-holiday/index.html",
-    gitHubRepo: "https://github.com/C-Sim/virtual-holiday",
-    featured: true,
-  },
   {
     img: dayPlanner,
     title: "Day Planner",
