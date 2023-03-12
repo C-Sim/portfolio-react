@@ -27,6 +27,7 @@ import workforcePlanner from "../components/atoms/images/workforce-planner.png";
 import weCare from "../components/atoms/images/wecare.png";
 import readingList from "../components/atoms/images/reading-list.png";
 import textEditor from "../components/atoms/images/text-editor.png";
+import jerkPit from "../components/atoms/images/cjp_homepage.png";
 
 export const Portfolio = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -126,20 +127,14 @@ const projects = [
   //   gitHubRepo: "",
   // },
   {
-    img: weCare,
-    title: "WeCare",
-    technologies: [
-      "React",
-      "GraphQL",
-      "MongoDB",
-      "MUI",
-      "GoogleMaps API",
-      "Node",
-    ],
-    deployedUrl: "https://fathomless-bayou-99698.herokuapp.com/",
-    gitHubRepo: "https://github.com/C-Sim/we-care-react",
+    img: jerkPit,
+    title: "Jerk Pit (WIP)",
+    technologies: ["React", "CSS", "MUI", "EmailJS"],
+    deployedUrl: "https://c-sim.github.io/jerk-pit/",
+    gitHubRepo: "https://github.com/C-Sim/jerk-pit",
     featured: true,
   },
+
   {
     img: readingList,
     title: "Reading List",
@@ -213,25 +208,41 @@ const projects = [
       "https://gist.github.com/C-Sim/96f7e9c795e5a16e5d032aa40f1aa665",
   },
   {
-    img: mentorMe,
-    title: "Mentor Me",
+    img: weCare,
+    title: "WeCare",
     technologies: [
-      "Express-Session",
-      "Connect-Session-Sequelize",
-      "MySQL",
-      "Handlebars",
-      "bcrypt",
-      "Nodemon",
-      "dotenv",
-      "Bootstrap",
-      "Heroku",
+      "React",
+      "GraphQL",
+      "MongoDB",
+      "MUI",
+      "GoogleMaps API",
+      "Node",
     ],
-    deployedUrl: "https://lit-atoll-12366.herokuapp.com/",
-    gitHubRepo: "https://github.com/C-Sim/coding-mentoring",
-    rows: 2,
-    cols: 2,
+    deployedUrl: "https://fathomless-bayou-99698.herokuapp.com/",
+    gitHubRepo: "https://github.com/C-Sim/we-care-react",
     featured: true,
   },
+
+  // {
+  //   img: mentorMe,
+  //   title: "Mentor Me",
+  //   technologies: [
+  //     "Express-Session",
+  //     "Connect-Session-Sequelize",
+  //     "MySQL",
+  //     "Handlebars",
+  //     "bcrypt",
+  //     "Nodemon",
+  //     "dotenv",
+  //     "Bootstrap",
+  //     "Heroku",
+  //   ],
+  //   deployedUrl: "https://lit-atoll-12366.herokuapp.com/",
+  //   gitHubRepo: "https://github.com/C-Sim/coding-mentoring",
+  //   rows: 2,
+  //   cols: 2,
+  //   featured: true,
+  // },
   {
     img: eCommBE,
     title: "eCommerce Back End",
