@@ -131,7 +131,7 @@ const projects = [
     title: "Jerk Pit (WIP)",
     technologies: ["React", "CSS", "MUI", "EmailJS"],
     deployedUrl: "https://c-sim.github.io/jerk-pit/",
-    gitHubRepo: "https://github.com/C-Sim/portfolio-react/tree/dev",
+    gitHubRepo: "https://github.com/C-Sim/jerk-pit/tree/dev",
     featured: true,
   },
 
